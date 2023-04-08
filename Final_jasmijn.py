@@ -156,10 +156,6 @@ fig6.show()
 #we zien hier een uitschieter van mag 8.8 in South America bij geen tsunami
 #laagst gemeten mag is 6.5
 
-
-# In[59]:
-
-
 fig7 = px.box(new_df, x='tsunami', y='Moon.height', color='continent')
 
 fig7.update_layout(
@@ -212,6 +208,9 @@ fig8.show()
 
 
 ###############
+st.markdown('Aardbevingen dataset')
+
+
 st.plotly_chart(fig1)
 st.plotly_chart(fig2)
 st.plotly_chart(fig3)
