@@ -69,8 +69,8 @@ import plotly.express as px
 # In[41]:
 
 
-solar = pd.read_csv(r'C:\Users\jasmi\Documents\Minor\VA eindpresentatie\SolarSystemAndEarthquakes.csv')
-df = pd.read_csv(r'C:\Users\jasmi\Documents\Minor\VA eindpresentatie\earthquake_data.csv')
+solar = pd.read_csv('SolarSystemAndEarthquakes.csv')
+df = pd.read_csv('earthquake_data.csv')
 
 
 # In[42]:
