@@ -129,17 +129,17 @@ fig4.show()
 #NOG VERHAAL BIJ TYPEN
 
 #heatmap van earthquakes
-plt.figure(figsize=(15, 10))
+fig5=plt.figure(figsize=(15, 10))
 sns.heatmap(df[['magnitude','nst','estimated intensity','sig','depth']].corr(), annot=True,linecolor = 'black', cmap='Blues')
-plt.show()
+fig5.show()
 #nst = the total number of seismic stations used to determine earthquake location
 
 px.scatter(df, y='magnitude', x='depth')
 #hieruit is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture
 
 
-fig5 = px.scatter(df, x="year", y="magnitude", color="alert", color_discrete_sequence=["green", "yellow", "orange", "red"])
-fig5.show()
+fig6 = px.scatter(df, x="year", y="magnitude", color="alert", color_discrete_sequence=["green", "yellow", "orange", "red"])
+fig6.show()
 #hier zien we dat in 2010 een magnitude 'red' was afgegeven en in 2012 de hoogste magnitude 'yellow' was. 
 #zegt deze data wel iets gezien hoogste magnitude eigenlijk 9.1 is? 
 
@@ -151,14 +151,14 @@ solar = solar[['earthquake.time', 'earthquake.latitude', 'earthquake.longitude',
 new_df = pd.merge(solar, df,  how='inner', left_on=['earthquake.latitude','earthquake.longitude'], right_on = ['latitude','longitude'])
 
 
-fig6 = px.box(df, x='continent', y='magnitude', title = 'Boxplot magnitude per continent with and without tsunami', color = 'tsunami')
-fig6.show()
+fig7 = px.box(df, x='continent', y='magnitude', title = 'Boxplot magnitude per continent with and without tsunami', color = 'tsunami')
+fig7.show()
 #we zien hier een uitschieter van mag 8.8 in South America bij geen tsunami
 #laagst gemeten mag is 6.5
 
-fig7 = px.box(new_df, x='tsunami', y='Moon.height', color='continent')
+fig8 = px.box(new_df, x='tsunami', y='Moon.height', color='continent')
 
-fig7.update_layout(
+fig8.update_layout(
     updatemenus=[
         dict(
             active=0,
@@ -193,7 +193,7 @@ fig7.update_layout(
 
 
 
-fig7.show()
+fig8.show()
 #in deze plot zien we of de hoogte van de maan samenhangt met het ontstaan van een tsunami per continent. 
 #bij de slider optie 'all continents' kunnen de continenten allemaal vergeleken worden.
 
@@ -201,14 +201,14 @@ fig7.show()
 # In[58]:
 
 
-fig8= px.scatter(new_df, x='sig', y='magnitude', animation_frame="year",trendline = 'ols')
-fig8.show()
+fig9= px.scatter(new_df, x='sig', y='magnitude', animation_frame="year",trendline = 'ols')
+fig9.show()
 #hier zien we een duidelijk verschil tussen significantie van de aardbeving en de magnitude. 
 #de trendlijn zal van 2001 steeds minder steil stijgen naar aanloop van 2016
 
 
 ###############
-st.image(
+st.image(earthquake_.jpg, caption='Bron: inszoneinsurance.com')
 st.title('Aardbevingen dataset')
 st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd')
 st.subheader('Bron: Kaggle (CHIRAG CHAUHAN)')
@@ -218,11 +218,11 @@ st.plotly_chart(fig1)
 st.plotly_chart(fig2)
 st.plotly_chart(fig3)
 st.plotly_chart(fig4)
-st.plotly_chart(fig5)
+st.pyplot(fig5)
 st.plotly_chart(fig6)
 st.plotly_chart(fig7)
 st.plotly_chart(fig8)
-
+st.plotly_chart(fig9)
 
 
 
