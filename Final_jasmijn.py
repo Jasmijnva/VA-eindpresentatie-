@@ -211,7 +211,7 @@ image = Image.open('earthquake_.jpg')
 st.image(image, caption='Bron: inszoneinsurance.com')
 st.title('Aardbevingen dataset')
 st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd')
-st.subheader('Bron: Kaggle (CHIRAG CHAUHAN)')
+st.caption('Bron: Kaggle (CHIRAG CHAUHAN)')
 
 
 st.plotly_chart(fig1)
