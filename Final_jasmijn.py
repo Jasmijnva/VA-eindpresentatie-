@@ -97,7 +97,7 @@ df_mag=df_mag.rename(columns={"index": "Magnitude", "magnitude": "Count"})
 
 
 #figuur overzicht aantal magnitudes
-fig1 = px.bar(df_mag, x="Magnitude", y='Count')
+fig1 = px.bar(df_mag, x="Magnitude", y='Aantal', title="Aantal aardbevingen per magnitude")
 fig1.update_layout(xaxis = dict(dtick = 0.1))
 fig1.show()
 
@@ -105,14 +105,14 @@ fig1.show()
 #pie chart van procent aardbevingen met of zonder tsunami
 tsunami_pie=df['tsunami'].value_counts().reset_index()
 tsunami_pie= tsunami_pie.rename(columns = {'index':'Tsunami', 'tsunami':'Counts'})
-fig2= px.pie(tsunami_pie, values='Counts', names='Tsunami')
+fig2= px.pie(tsunami_pie, values='Counts', names='Tsunami', title='Percentage aardbevingen met en zonder een tsunami')
 fig2.show()
 #Uit deze taartdiagram kan geconcludeerd worden dat circa 40 procent van alle geregistreede aardbevingen ook een tsunami teweeg brengen.
 
 
 #pie chart van percentage tsunami's per continent 
 df_grouped = df.groupby('continent')['tsunami'].value_counts().reset_index(name='counts')
-fig3 = px.pie(df_grouped, values = 'counts', names = 'continent', color = 'tsunami')
+fig3 = px.pie(df_grouped, values = 'counts', names = 'continent', color = 'tsunami', title='Percentage aardbevingen met of zonder tsunami per continent')
 fig3.show()
 #DROPDOWN inzetten
 
@@ -134,12 +134,12 @@ sns.heatmap(df[['magnitude','nst','estimated intensity','sig','depth']].corr(), 
 fig5.show()
 #nst = the total number of seismic stations used to determine earthquake location
 
-px.scatter(df, y='magnitude', x='depth')
+fig6 = px.scatter(df, y='magnitude', x='depth', title='Geen verband tussen de magnitude en de rupture diepte')
 #hieruit is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture
 
 
-fig6 = px.scatter(df, x="year", y="magnitude", color="alert", color_discrete_sequence=["green", "yellow", "orange", "red"])
-fig6.show()
+fig7 = px.scatter(df, x="year", y="magnitude", color="alert", color_discrete_sequence=["green", "yellow", "orange", "red"], title='Verhouding tussen de magnitude en het alert per jaar')
+fig7.show()
 #hier zien we dat in 2010 een magnitude 'red' was afgegeven en in 2012 de hoogste magnitude 'yellow' was. 
 #zegt deze data wel iets gezien hoogste magnitude eigenlijk 9.1 is? 
 
@@ -151,14 +151,14 @@ solar = solar[['earthquake.time', 'earthquake.latitude', 'earthquake.longitude',
 new_df = pd.merge(solar, df,  how='inner', left_on=['earthquake.latitude','earthquake.longitude'], right_on = ['latitude','longitude'])
 
 
-fig7 = px.box(df, x='continent', y='magnitude', title = 'Boxplot magnitude per continent with and without tsunami', color = 'tsunami')
-fig7.show()
+fig8 = px.box(df, x='continent', y='magnitude', title = 'Boxplot magnitude per continent met en zonder tsunami', color = 'tsunami')
+fig8.show()
 #we zien hier een uitschieter van mag 8.8 in South America bij geen tsunami
 #laagst gemeten mag is 6.5
 
-fig8 = px.box(new_df, x='tsunami', y='Moon.height', color='continent')
+fig9 = px.box(new_df, x='tsunami', y='Moon.height', color='continent', title='Verband tussen de stand van de maan tegenover het voorkomen van een tsunami')
 
-fig8.update_layout(
+fig9.update_layout(
     updatemenus=[
         dict(
             active=0,
@@ -193,7 +193,7 @@ fig8.update_layout(
 
 
 
-fig8.show()
+fig9.show()
 #in deze plot zien we of de hoogte van de maan samenhangt met het ontstaan van een tsunami per continent. 
 #bij de slider optie 'all continents' kunnen de continenten allemaal vergeleken worden.
 
@@ -201,10 +201,14 @@ fig8.show()
 # In[58]:
 
 
-fig9= px.scatter(new_df, x='sig', y='magnitude', animation_frame="year",trendline = 'ols')
-fig9.show()
+fig10= px.scatter(new_df, x='sig', y='magnitude', animation_frame="year",trendline = 'ols', title='Verband tussen de significantie van een aardbeving en de magnitude')
+fig10.show()
 #hier zien we een duidelijk verschil tussen significantie van de aardbeving en de magnitude. 
 #de trendlijn zal van 2001 steeds minder steil stijgen naar aanloop van 2016
+
+fig11=px.scatter(df, x= 'depth', y='difference rep vs. est', color='depth', color_discrete_sequence=["green", "yellow", "orange", "red"], trendline='ols', title='Verband tussen de accuratie van de magnitude voorspelling en de rupturediepte')
+fig11.show()
+
 
 image = Image.open('earthquake_.jpg')
 ###############
@@ -234,6 +238,7 @@ with tab2:
   st.plotly_chart(fig7)
   st.plotly_chart(fig8)
   st.plotly_chart(fig9)
+  st.plotly_chart(fig10)
   
   with tab3:
     st.header('Map')
