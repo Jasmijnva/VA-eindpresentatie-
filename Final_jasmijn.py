@@ -131,7 +131,7 @@ fig4.show()
 #heatmap van earthquakes
 plt.figure(figsize=(15, 10))
 sns.heatmap(df[['magnitude','nst','estimated intensity','sig','depth']].corr(), annot=True,linecolor = 'black', cmap='Blues')
-plt.show()
+st.altair_chart(chart, theme='streamlit')
 #nst = the total number of seismic stations used to determine earthquake location
 
 px.scatter(df, y='magnitude', x='depth')
