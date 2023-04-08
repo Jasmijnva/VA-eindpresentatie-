@@ -213,6 +213,7 @@ st.title('Aardbevingen dataset')
 st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd')
 st.caption('Bron: Kaggle (CHIRAG CHAUHAN)')
 
+col1, col2 = st.beta_columns(2)
 with col1:
   st.plotly_chart(fig1)
 with col2:
