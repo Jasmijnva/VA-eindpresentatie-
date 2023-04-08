@@ -302,6 +302,7 @@ st.caption('Bron: Kaggle (CHIRAG CHAUHAN)')
 tab1, tab2, tab3, tab4 = st.tabs(["Dataset", "1D Analyse", "2D Analyse", "Map"])
 
 with tab1:
+  st.header('Overzicht dataframe:')
   st.dataframe(df, width=1200)
   st.header('Betekenissen van de kolommen:')
   
