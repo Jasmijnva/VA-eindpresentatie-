@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # In[11]:
-!pip install streamlit_folium
+pip install streamlit_folium
 
 
 import requests
