@@ -211,9 +211,7 @@ fig11=px.scatter(df, x= 'depth', y='difference rep vs. est', color='depth', colo
 fig11.show()
 
 #Folium map
-
-
-
+tectonic_plates = pd.read_csv('all.csv')
 
 def get_color(value):
     if value < 3:
