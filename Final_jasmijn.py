@@ -214,6 +214,8 @@ st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd')
 st.caption('Bron: Kaggle (CHIRAG CHAUHAN)')
 
 col1, col2 = st.columns([250, 10])
+
+st.header('1D analyse')
 with col1:
   st.plotly_chart(fig1)
 with col2:
