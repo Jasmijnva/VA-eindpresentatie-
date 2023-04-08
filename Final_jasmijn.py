@@ -208,7 +208,7 @@ fig9.show()
 
 image = Image.open('earthquake_.jpg')
 ###############
-st.image(image, caption='Bron: inszoneinsurance.com')
+st.image(image, caption='Bron: inszoneinsurance.com', width=400)
 st.title('Aardbevingen dataset')
 st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd')
 st.caption('Bron: Kaggle (CHIRAG CHAUHAN)')
