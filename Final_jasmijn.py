@@ -206,9 +206,9 @@ fig9.show()
 #hier zien we een duidelijk verschil tussen significantie van de aardbeving en de magnitude. 
 #de trendlijn zal van 2001 steeds minder steil stijgen naar aanloop van 2016
 
-
+image = Image.open('earthquake_.jpg')
 ###############
-st.image(earthquake_.jpg, caption='Bron: inszoneinsurance.com')
+st.image(image, caption='Bron: inszoneinsurance.com')
 st.title('Aardbevingen dataset')
 st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd')
 st.subheader('Bron: Kaggle (CHIRAG CHAUHAN)')
