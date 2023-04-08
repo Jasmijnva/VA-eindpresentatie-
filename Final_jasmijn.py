@@ -239,6 +239,7 @@ with tab2:
   st.plotly_chart(fig8)
   st.plotly_chart(fig9)
   st.plotly_chart(fig10)
+  st.plotly_chart(fig11)
   
   with tab3:
     st.header('Map')
