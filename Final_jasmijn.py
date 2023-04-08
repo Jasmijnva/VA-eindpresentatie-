@@ -97,7 +97,7 @@ df_mag=df_mag.rename(columns={"index": "Magnitude", "magnitude": "Count"})
 
 
 #figuur overzicht aantal magnitudes
-fig1 = px.bar(df_mag, x="Magnitude", y='Aantal', title="Aantal aardbevingen per magnitude")
+fig1 = px.bar(df_mag, x="Magnitude", y='Count', title="Aantal aardbevingen per magnitude")
 fig1.update_layout(xaxis = dict(dtick = 0.1))
 fig1.show()
 
