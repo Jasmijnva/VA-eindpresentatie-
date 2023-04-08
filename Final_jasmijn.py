@@ -199,9 +199,6 @@ fig9.show()
 #bij de slider optie 'all continents' kunnen de continenten allemaal vergeleken worden.
 
 
-# In[58]:
-
-
 fig10= px.scatter(new_df, x='sig', y='magnitude', animation_frame="year",trendline = 'ols', title='Verband tussen de significantie van een aardbeving en de magnitude')
 fig10.show()
 #hier zien we een duidelijk verschil tussen significantie van de aardbeving en de magnitude. 
@@ -211,104 +208,121 @@ fig11=px.scatter(df, x= 'depth', y='difference rep vs. est', color='depth', colo
 fig11.show()
 
 #Folium map
-tectonic_plates = pd.read_csv('all.csv')
+#tectonic_plates = pd.read_csv('all.csv')
 
-def get_color(value):
-    if value < 3:
-        return 'green'
-    elif 3 < value < 5:
-        return 'yellow'
-    elif 5 < value < 7:
-        return 'orange'
-    elif 7 < value < 8:
-        return 'red'
-    else:
-        return 'black'
-# Define a function to get the popup content
-def get_popup(row):
-    return f"Location: {row['location']}<br>Magnitude: {row['magnitude']}"
+#def get_color(value):
+    #if value < 3:
+        #return 'green'
+    #elif 3 < value < 5:
+        #return 'yellow'
+    #elif 5 < value < 7:
+        #return 'orange'
+    #elif 7 < value < 8:
+        #return 'red'
+    #else:
+        #return 'black'
 
-# Create feature groups for different earthquake magnitudes
+#def get_popup(row):
+    #return f"Location: {row['location']}<br>Magnitude: {row['magnitude']}"
 
-complete_map = folium.Map()
+#complete_map = folium.Map()
 
-plate_layer = folium.FeatureGroup(name='Tectonic Plates')
+#plate_layer = folium.FeatureGroup(name='Tectonic Plates')
 
-plates = list(tectonic_plates['plate'].unique())
-for plate in plates:
-    plate_vals = tectonic_plates[tectonic_plates['plate'] == plate]
-    lats = plate_vals['lat'].values
-    lons = plate_vals['lon'].values
-    points = list(zip(lats, lons))
-    indexes = [None] + [i + 1 for i, x in enumerate(points) if i < len(points) - 1 and abs(x[1] - points[i + 1][1]) > 300] + [None]
+#plates = list(tectonic_plates['plate'].unique())
+#for plate in plates:
+    #plate_vals = tectonic_plates[tectonic_plates['plate'] == plate]
+    #lats = plate_vals['lat'].values
+    #lons = plate_vals['lon'].values
+    #points = list(zip(lats, lons))
+    #indexes = [None] + [i + 1 for i, x in enumerate(points) if i < len(points) - 1 and abs(x[1] - points[i + 1][1]) > 300] + [None]
 
-    for i in range(len(indexes) - 1):
-        folium.vector_layers.PolyLine(points[indexes[i]:indexes[i+1]], popup=plate, color='red', fill=False).add_to(plate_layer)
-plate_layer.add_to(complete_map)
+    #for i in range(len(indexes) - 1):
+        #folium.vector_layers.PolyLine(points[indexes[i]:indexes[i+1]], popup=plate, color='red', fill=False).add_to(plate_layer)
+#plate_layer.add_to(complete_map)
 
-# Define feature groups for all earthquakes and those with tsunamis
-all_quakes = folium.FeatureGroup(name='All earthquakes')
-tsunami_quakes = folium.FeatureGroup(name='Tsunami earthquakes')
-mag_2_3 = folium.FeatureGroup(name='Magnitude 2-3')
-mag_3_5 = folium.FeatureGroup(name='Magnitude 3-5')
-mag_5_7 = folium.FeatureGroup(name='Magnitude 5-7')
-mag_7_8 = folium.FeatureGroup(name='Magnitude 7-8')
-mag_8 = folium.FeatureGroup(name='Magnitude >8')
+#all_quakes = folium.FeatureGroup(name='All earthquakes')
+#tsunami_quakes = folium.FeatureGroup(name='Tsunami earthquakes')
+#mag_2_3 = folium.FeatureGroup(name='Magnitude 2-3')
+#mag_3_5 = folium.FeatureGroup(name='Magnitude 3-5')
+#mag_5_7 = folium.FeatureGroup(name='Magnitude 5-7')
+#mag_7_8 = folium.FeatureGroup(name='Magnitude 7-8')
+#mag_8 = folium.FeatureGroup(name='Magnitude >8')
 
-# Add markers for each earthquake to the appropriate feature group
-for index, row in df.iterrows():
-    popup_str = get_popup(row)
-    color = get_color(row['magnitude'])
+#for index, row in df.iterrows():
+    #popup_str = get_popup(row)
+    #color = get_color(row['magnitude'])
     
-    marker = folium.Marker(location=[row['latitude'], row['longitude']],
-                           popup=popup_str,
-                           icon=folium.Icon(color=color))
-    if row['magnitude'] < 3:
-        mag_2_3.add_child(marker)
-    elif 3 <= row['magnitude'] < 5:
-        mag_3_5.add_child(marker)
-    elif 5 <= row['magnitude'] < 7:
-        mag_5_7.add_child(marker)
-    elif 7 <= row['magnitude'] < 8:
-        mag_7_8.add_child(marker)
-    else:
-        mag_8.add_child(marker)
+    #marker = folium.Marker(location=[row['latitude'], row['longitude']],
+                           #popup=popup_str,
+                           #icon=folium.Icon(color=color))
+    #if row['magnitude'] < 3:
+        #mag_2_3.add_child(marker)
+    #elif 3 <= row['magnitude'] < 5:
+        #mag_3_5.add_child(marker)
+    #elif 5 <= row['magnitude'] < 7:
+        #mag_5_7.add_child(marker)
+    #elif 7 <= row['magnitude'] < 8:
+        #mag_7_8.add_child(marker)
+    #else:
+        #mag_8.add_child(marker)
         
-    all_quakes.add_child(marker)
+    #all_quakes.add_child(marker)
     
-    if row['tsunami'] == 1:
-        tsunami_marker = folium.Marker(location=[row['latitude'], row['longitude']],
-                                       popup=popup_str,
-                                       icon=folium.Icon(color=color))
-        tsunami_quakes.add_child(tsunami_marker)
+    #if row['tsunami'] == 1:
+        #tsunami_marker = folium.Marker(location=[row['latitude'], row['longitude']],
+                                       #popup=popup_str,
+                                      #icon=folium.Icon(color=color))
+        #tsunami_quakes.add_child(tsunami_marker)
            
 
-complete_map.add_child(all_quakes)
-complete_map.add_child(tsunami_quakes)
-complete_map.add_child(mag_2_3)
-complete_map.add_child(mag_3_5)
-complete_map.add_child(mag_5_7)
-complete_map.add_child(mag_7_8)
-complete_map.add_child(mag_8)
+#complete_map.add_child(all_quakes)
+#complete_map.add_child(tsunami_quakes)
+#complete_map.add_child(mag_2_3)
+#complete_map.add_child(mag_3_5)
+#complete_map.add_child(mag_5_7)
+#complete_map.add_child(mag_7_8)
+#complete_map.add_child(mag_8)
     
-folium.LayerControl(position='bottomleft', collapsed=False).add_to(complete_map)
+#folium.LayerControl(position='bottomleft', collapsed=False).add_to(complete_map)
     
-folium.LayerControl().add_to(complete_map)
+#folium.LayerControl().add_to(complete_map)
 
-complete_map
+#complete_map
 
 image = Image.open('earthquake_.jpg')
 ######################################################################################################
+
 st.image(image, caption='Bron: inszoneinsurance.com', width=1200)
 st.title('Aardbevingen dataset')
 st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd')
 st.caption('Bron: Kaggle (CHIRAG CHAUHAN)')
 
 
-tab1, tab2, tab3 = st.tabs(["1D Analyse", "2D Analyse", "Map"])
-
+tab1, tab2, tab3, tab4 = st.tabs(["Dataset", "1D Analyse", "2D Analyse", "Map"])
 
 with tab1:
+  st.dataframe(df)
+  st.write('title: title name given to the earthquake')
+  st.write('magnitude: The magnitude of the earthquake')
+  st.write('date_time: date and time')
+  st.write('cdi: The maximum reported intensity for the event range')
+  st.write('mmi: The maximum estimated instrumental intensity for the event')
+  st.write('alert: The alert level - “green”, “yellow”, “orange”, and “red”')
+  st.write('tsunami: "1" for events in oceanic regions and "0" otherwise')
+  st.write('sig: A number describing how significant the event is. Larger numbers indicate a more significant event. This value is determined on a number of factors, including: magnitude, maximum MMI, felt reports, and estimated impact')
+  st.write('net: The ID of a data contributor. Identifies the network considered to be the preferred source of information for this event.')
+  st.write('nst: The total number of seismic stations used to determine earthquake location.')
+  st.write('dmin: Horizontal distance from the epicenter to the nearest station')
+  st.write('gap: The largest azimuthal gap between azimuthally adjacent stations (in degrees). In general, the smaller this number, the more reliable is the calculated horizontal position of the earthquake. Earthquake locations in which the azimuthal gap exceeds 180 degrees typically have large location and depth uncertainties')
+  st.write('magType: The method or algorithm used to calculate the preferred magnitude for the event')
+  st.write('depth: The depth where the earthquake begins to rupture')
+  st.write('latitude / longitude: coordinate system by means of which the position or location of any place on Earths surface can be determined and described')
+  st.write('location: location within the country')
+  st.write('continent: continent of the earthquake hit country')
+  st.write('country: affected country')
+
+with tab2:
   st.header('1D Analyse')
   col1, col2 = st.columns([250, 10])
   with col1:
@@ -316,7 +330,7 @@ with tab1:
     with col2:
       st.plotly_chart(fig2)  
   
-with tab2:
+with tab3:
   st.header('2D Analyse')
   st.plotly_chart(fig3)
   st.plotly_chart(fig4)
@@ -328,9 +342,9 @@ with tab2:
   st.plotly_chart(fig10)
   st.plotly_chart(fig11)
   
-  with tab3:
+  with tab4:
     st.header('Map')
-    st_folium(complete_map)            
+    #st_folium(complete_map)            
 
 
 
