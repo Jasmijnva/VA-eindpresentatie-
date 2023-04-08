@@ -208,7 +208,10 @@ fig8.show()
 
 
 ###############
-st.markdown('Aardbevingen dataset')
+st.image(
+st.title('Aardbevingen dataset')
+st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd')
+st.subheader('Bron: Kaggle (CHIRAG CHAUHAN)')
 
 
 st.plotly_chart(fig1)
