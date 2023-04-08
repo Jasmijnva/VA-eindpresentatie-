@@ -2,8 +2,6 @@
 # coding: utf-8
 
 # In[11]:
-pip install streamlit_folium
-
 
 import requests
 
@@ -14,6 +12,8 @@ import folium
 import streamlit as st
 
 from streamlit_folium import st_folium
+
+import folium.plugins
 
 from PIL import Image
 
