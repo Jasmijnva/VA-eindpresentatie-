@@ -298,7 +298,11 @@ plt.show()
 #de trendlijn zal van 2001 steeds minder steil stijgen naar aanloop van 2016
 
 
-# In[ ]:
+###############
+st.plotly_chart(fig2)
+st.plotly_chart(fig7)
+
+
 
 
 
