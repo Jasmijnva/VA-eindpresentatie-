@@ -302,7 +302,8 @@ st.caption('Bron: Kaggle (CHIRAG CHAUHAN)')
 tab1, tab2, tab3, tab4 = st.tabs(["Dataset", "1D Analyse", "2D Analyse", "Map"])
 
 with tab1:
-  st.dataframe(df)
+  st.dataframe(df, width=1200)
+  st.divider()
   st.write('title: title name given to the earthquake')
   st.write('magnitude: The magnitude of the earthquake')
   st.write('date_time: date and time')
@@ -321,7 +322,8 @@ with tab1:
   st.write('location: location within the country')
   st.write('continent: continent of the earthquake hit country')
   st.write('country: affected country')
-
+  st.divider()
+  
 with tab2:
   st.header('1D Analyse')
   col1, col2 = st.columns([250, 10])
