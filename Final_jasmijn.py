@@ -227,21 +227,14 @@ with tab1:
   
 with tab2:
   st.header('2D Analyse')
-  col3, col4= st.columns([250, 10])
-  with col3:
-    st.plotly_chart(fig3)
-    with col4:
-      st.plotly_chart(fig4)
-      with col3:
-        st.pyplot(fig5)
-        with col4:
-          st.plotly_chart(fig6)
-          with col3:
-            st.plotly_chart(fig7)
-            with col4:
-              st.plotly_chart(fig8)
-              with col3:
-                st.plotly_chart(fig9)
+  st.plotly_chart(fig3)
+  st.plotly_chart(fig4)
+  st.pyplot(fig5)
+  st.plotly_chart(fig6)
+  st.plotly_chart(fig7)
+  st.plotly_chart(fig8)
+  st.plotly_chart(fig9)
+  
   with tab3:
     st.header('Map')
                 
