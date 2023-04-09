@@ -100,7 +100,9 @@ df_mag=df_mag.rename(columns={"index": "Magnitude", "magnitude": "Count"})
 fig1 = px.bar(df_mag, x="Magnitude", y='Count', title="Aantal aardbevingen per magnitude")
 fig1.update_layout(xaxis = dict(dtick = 0.1))
 fig1.show()
-
+st.header('Conclusies data explanatory')
+st.write('Zoals we kunnen zien zijn er veel aardbevingen die in de magnitude 6.5 geschaald zijn')
+st.write('Er is een enkele aardbeving in de magnitude 9.1, hier hebben we verder onderzoek naar gedaan')
 
 #pie chart van procent aardbevingen met of zonder tsunami
 tsunami_pie=df['tsunami'].value_counts().reset_index()
