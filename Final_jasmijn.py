@@ -324,6 +324,7 @@ with tab1:
   st.write('Location: location within the country')
   st.write('Continent: continent of the earthquake hit country')
   st.write('Country: affected country')
+  st.write('Diff rep vs. est: difference between the reported and estimated intensity for the event range')
   
   st.header('Betekenissen alerts:')
   st.write('Red: Estimated Fatalities 1,000+, Estimated Losses(USD) 1 billion+')
