@@ -292,6 +292,8 @@ tectonic_plates = pd.read_csv('all.csv')
 
 
 st.set_page_config(page_title="Mapping Demo", page_icon="🌍")
+st.markdown("# Mapping Demo")
+st.sidebar.header("Mapping Demo")
 
 image = Image.open('earthquake_.jpg')
 ######################################################################################################
