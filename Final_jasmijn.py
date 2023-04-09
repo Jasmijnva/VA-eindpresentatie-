@@ -112,9 +112,9 @@ fig2.show()
 
 #pie chart van percentage tsunami's per continent 
 df_grouped = df.groupby('continent')['tsunami'].value_counts().reset_index(name='counts')
-fig3 = px.pie(df_grouped, values = 'counts', names = 'continent', color = 'tsunami', title='Percentage aardbevingen met of zonder tsunami per continent')
+fig3 = px.pie(df_grouped, values = 'counts', names = 'continent', color = 'tsunami', color_discrete_sequence=["red", "green", "blue", "goldenrod", "magenta"],title='Percentage aardbevingen met of zonder tsunami per continent')
 fig3.show()
-#DROPDOWN inzetten
+
 
 #bar chart van gap's per continent 
 fig4 = px.bar(df, y="continent", x="gap", color="continent", orientation="h", hover_name="country",
