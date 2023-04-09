@@ -166,27 +166,27 @@ fig9.update_layout(
             buttons=list([
                 dict(label="All continents",
                      method="update",
-                     args=[{"visible": [True] * len(fig7.data)},
+                     args=[{"visible": [True] * len(fig9.data)},
                            {"title": "All continents"}]),
                 dict(label="Asia",
                      method="update",
-                     args=[{"visible": [trace.name == 'Asia' for trace in fig7.data]},
+                     args=[{"visible": [trace.name == 'Asia' for trace in fig9.data]},
                            {"title": "Asia"}]),
                 dict(label="South America",
                      method="update",
-                     args=[{"visible": [trace.name == 'South America' for trace in fig7.data]},
+                     args=[{"visible": [trace.name == 'South America' for trace in fig9.data]},
                            {"title": "South America"}]),
                 dict(label="Europe",
                      method="update",
-                     args=[{"visible": [trace.name == 'Europe' for trace in fig7.data]},
+                     args=[{"visible": [trace.name == 'Europe' for trace in fig9.data]},
                            {"title": "Europe"}]),
                 dict(label="North America",
                      method="update",
-                     args=[{"visible": [trace.name == 'North America' for trace in fig7.data]},
+                     args=[{"visible": [trace.name == 'North America' for trace in fig9.data]},
                            {"title": "North America"}]),
                 dict(label="Africa",
                      method="update",
-                     args=[{"visible": [trace.name == 'Africa' for trace in fig7.data]},
+                     args=[{"visible": [trace.name == 'Africa' for trace in fig9.data]},
                            {"title": "Africa"}]),
             ]),
         )
@@ -306,24 +306,30 @@ with tab1:
   st.dataframe(df, width=1200)
   st.header('Betekenissen van de kolommen:')
   
-  st.write('title: title name given to the earthquake')
-  st.write('magnitude: The magnitude of the earthquake')
-  st.write('date_time: date and time')
-  st.write('cdi: The maximum reported intensity for the event range')
-  st.write('mmi: The maximum estimated instrumental intensity for the event')
-  st.write('alert: The alert level - “green”, “yellow”, “orange”, and “red”')
-  st.write('tsunami: "1" for events in oceanic regions and "0" otherwise')
-  st.write('sig: A number describing how significant the event is. Larger numbers indicate a more significant event. This value is determined on a number of factors, including: magnitude, maximum MMI, felt reports, and estimated impact')
-  st.write('net: The ID of a data contributor. Identifies the network considered to be the preferred source of information for this event.')
-  st.write('nst: The total number of seismic stations used to determine earthquake location.')
-  st.write('dmin: Horizontal distance from the epicenter to the nearest station')
-  st.write('gap: The largest azimuthal gap between azimuthally adjacent stations (in degrees). In general, the smaller this number, the more reliable is the calculated horizontal position of the earthquake. Earthquake locations in which the azimuthal gap exceeds 180 degrees typically have large location and depth uncertainties')
-  st.write('magType: The method or algorithm used to calculate the preferred magnitude for the event')
-  st.write('depth: The depth where the earthquake begins to rupture')
-  st.write('latitude / longitude: coordinate system by means of which the position or location of any place on Earths surface can be determined and described')
-  st.write('location: location within the country')
-  st.write('continent: continent of the earthquake hit country')
-  st.write('country: affected country')
+  st.write('Title: title name given to the earthquake')
+  st.write('Magnitude: The magnitude of the earthquake')
+  st.write('Date_time: date and time')
+  st.write('Reported intensity: The maximum reported intensity for the event range')
+  st.write('Estimated intensity: The maximum estimated instrumental intensity for the event')
+  st.write('Alert: The alert level - “green”, “yellow”, “orange”, and “red”')
+  st.write('Tsunami: "1" for events in oceanic regions and "0" otherwise')
+  st.write('Sig: A number describing how significant the event is. Larger numbers indicate a more significant event. This value is determined on a number of factors, including: magnitude, maximum MMI, felt reports, and estimated impact')
+  st.write('Net: The ID of a data contributor. Identifies the network considered to be the preferred source of information for this event.')
+  st.write('Nst: The total number of seismic stations used to determine earthquake location.')
+  st.write('Dmin: Horizontal distance from the epicenter to the nearest station')
+  st.write('Gap: The largest azimuthal gap between azimuthally adjacent stations (in degrees). In general, the smaller this number, the more reliable is the calculated horizontal position of the earthquake. Earthquake locations in which the azimuthal gap exceeds 180 degrees typically have large location and depth uncertainties')
+  st.write('MagType: The method or algorithm used to calculate the preferred magnitude for the event')
+  st.write('Depth: The depth where the earthquake begins to rupture')
+  st.write('Latitude / Longitude: coordinate system by means of which the position or location of any place on Earths surface can be determined and described')
+  st.write('Location: location within the country')
+  st.write('Continent: continent of the earthquake hit country')
+  st.write('Country: affected country')
+  
+  
+  st.write('red Estimated Fatalities 1,000+, Estimated Losses(USD) 1 billion+')
+st.write('orange Estimated Fatalities 100 - 999, Estimated Losses(USD) 100 million - 1 billion')
+st.write('yellow Estimated Fatalities 1-99, Estimated Losses(USD) 1 million - 100 million')
+st.write('green Estimated Fatalities 0, Estimated Losses(USD) < 1 million')
   
   
 with tab2:
