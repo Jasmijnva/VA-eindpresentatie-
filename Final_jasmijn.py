@@ -291,7 +291,7 @@ tectonic_plates = pd.read_csv('all.csv')
 #complete_map
 
 
-st.set_page_config(page_title='Cross Chain Monitoring Tool', page_icon=':bar_chart:', layout='wide')
+
 
 image = Image.open('earthquake_.jpg')
 ######################################################################################################
