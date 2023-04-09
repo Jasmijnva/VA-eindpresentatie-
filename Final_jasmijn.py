@@ -342,7 +342,7 @@ with tab2:
   st.header('Conclusies data explanatory')
   st.write('Zoals we kunnen zien zijn er veel aardbevingen die in de magnitude 6.5 geschaald zijn')
   st.write('Er is een enkele aardbeving in de magnitude 9.1, hier hebben we verder onderzoek naar gedaan')
-    with col2:
+with col2:
       st.plotly_chart(fig2)  
   
 with tab3:
