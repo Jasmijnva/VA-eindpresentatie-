@@ -344,7 +344,7 @@ with tab2:
   st.write('Er is een enkele aardbeving in de magnitude 9.1, hier hebben we verder onderzoek naar gedaan')
 with col2:
       st.plotly_chart(fig2)  
-  
+  st.write('Meer dan 60% van de aardbevingen hebben geen tsunami')
 with tab3:
   st.header('2D Analyse')
   st.plotly_chart(fig3)
