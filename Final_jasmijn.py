@@ -325,11 +325,11 @@ with tab1:
   st.write('Continent: continent of the earthquake hit country')
   st.write('Country: affected country')
   
-   st.header('Betekenissen alerts:')
+  st.header('Betekenissen alerts:')
   st.write('red Estimated Fatalities 1,000+, Estimated Losses(USD) 1 billion+')
-st.write('orange Estimated Fatalities 100 - 999, Estimated Losses(USD) 100 million - 1 billion')
-st.write('yellow Estimated Fatalities 1-99, Estimated Losses(USD) 1 million - 100 million')
-st.write('green Estimated Fatalities 0, Estimated Losses(USD) < 1 million')
+  st.write('orange Estimated Fatalities 100 - 999, Estimated Losses(USD) 100 million - 1 billion')
+  st.write('yellow Estimated Fatalities 1-99, Estimated Losses(USD) 1 million - 100 million')
+  st.write('green Estimated Fatalities 0, Estimated Losses(USD) < 1 million')
   
   
 with tab2:
