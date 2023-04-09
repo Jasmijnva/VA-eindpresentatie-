@@ -303,7 +303,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["Dataset", "1D Analyse", "2D Analyse", "Map"])
 
 with tab1:
   st.header('Overzicht dataframe:')
-  st.dataframe(df, width=1200)
+  st.dataframe(new_df, width=1200)
   st.header('Betekenissen van de kolommen:')
   
   st.write('Title: title name given to the earthquake')
