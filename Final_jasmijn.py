@@ -294,7 +294,7 @@ image = Image.open('earthquake_.jpg')
 ######################################################################################################
 
 st.image(image, caption='Bron: inszoneinsurance.com', width=1200)
-st.title('Aardbevingen dataset')
+st.title('Solar system and Earthquakes')
 st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd')
 st.caption('Bron: Kaggle (CHIRAG CHAUHAN)')
 
@@ -325,7 +325,7 @@ with tab1:
   st.write('Continent: continent of the earthquake hit country')
   st.write('Country: affected country')
   
-  
+   st.header('Betekenissen alerts:')
   st.write('red Estimated Fatalities 1,000+, Estimated Losses(USD) 1 billion+')
 st.write('orange Estimated Fatalities 100 - 999, Estimated Losses(USD) 100 million - 1 billion')
 st.write('yellow Estimated Fatalities 1-99, Estimated Losses(USD) 1 million - 100 million')
