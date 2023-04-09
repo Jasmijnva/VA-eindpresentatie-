@@ -290,6 +290,9 @@ tectonic_plates = pd.read_csv('all.csv')
 
 #complete_map
 
+
+st.set_page_config(page_title="Mapping Demo", page_icon="🌍")
+
 image = Image.open('earthquake_.jpg')
 ######################################################################################################
 
@@ -353,6 +356,8 @@ with tab3:
   st.write('De meeste aardbevingen zijn in Azie ontstaan')
   st.write('In het continent Azie is er veel data over gaps. Ondanks dat zijn de grootste gaps gemeten in Noord-America, namelijk in Mexico. Hier is een gap van 239 degrees gemeten.')
   st.write('Met deze data zijn we verder gaan zoeken naar een verband met gaps.')
+  
+  
   st.plotly_chart(fig4)
   st.pyplot(fig5)
   st.plotly_chart(fig6)
