@@ -295,7 +295,7 @@ image = Image.open('earthquake_.jpg')
 
 st.image(image, caption='Bron: inszoneinsurance.com', width=1200)
 st.title('Solar system and Earthquakes')
-st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd')
+st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd 2001-2022')
 st.caption('Bron: Kaggle (CHIRAG CHAUHAN)')
 
 
@@ -350,6 +350,9 @@ with tab2:
 with tab3:
   st.header('2D Analyse')
   st.plotly_chart(fig3)
+  st.write('De meeste aardbevingen zijn in Azie ontstaan')
+  st.write('In het continent Azie is er veel data over gaps. Ondanks dat zijn de grootste gaps gemeten in Noord-America, namelijk in Mexico. Hier is een gap van 239 degrees gemeten.')
+  st.write('Met deze data zijn we verder gaan zoeken naar een verband met gaps.')
   st.plotly_chart(fig4)
   st.pyplot(fig5)
   st.plotly_chart(fig6)
