@@ -146,4 +146,4 @@ folium.LayerControl().add_to(complete_map)
 
 complete_map
 
-st_data = st_folium(complete_map, width=725)
+st_folium(complete_map, width=725)
