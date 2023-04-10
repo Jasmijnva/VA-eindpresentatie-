@@ -70,7 +70,7 @@ tectonic_plates = pd.read_csv('all.csv')
 
 
 def get_color(value):
-    if value < 3:
+  if value < 3:
         return 'green'
     elif 3 < value < 5:
         return 'yellow'
