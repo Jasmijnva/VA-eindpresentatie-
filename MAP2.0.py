@@ -120,9 +120,9 @@ for index, row in df.iterrows():
   color = get_color(row['magnitude'])
 
   marker = folium.Marker(location=[row['latitude'], row['longitude']],popup=popup_str,icon=folium.Icon(color=color))
-    if row['magnitude'] < 3:
-      mag_2_3.add_child(marker)
-    elif 3 <= row['magnitude'] < 5:
+  if row['magnitude'] < 3:
+    mag_2_3.add_child(marker)
+    elif 3 <= row['magnitude'] < 5:
       mag_3_5.add_child(marker)
     elif 5 <= row['magnitude'] < 7:
       mag_5_7.add_child(marker)
