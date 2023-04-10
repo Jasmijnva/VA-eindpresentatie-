@@ -355,7 +355,7 @@ with tab2:
     st.plotly_chart(fig2)  
   st.write('Meer dan 60% van de aardbevingen hebben geen tsunami')
   
-  with tab3:
+with tab3:
   st.header('2D Analyse')
   
   st.plotly_chart(fig3)
