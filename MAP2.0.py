@@ -82,7 +82,7 @@ def get_color(value):
     return 'black'
 # Define a function to get the popup content
 def get_popup(row):
-    return f"Location: {row['location']}<br>Magnitude: {row['magnitude']}"
+  return f"Location: {row['location']}<br>Magnitude: {row['magnitude']}"
 
  
 
