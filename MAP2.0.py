@@ -86,8 +86,6 @@ def get_popup(row):
 
 # Create feature groups for different earthquake magnitudes
 
- 
-
 complete_map = folium.Map()
 
  
