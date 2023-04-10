@@ -101,7 +101,7 @@ for plate in plates:
 
 for i in range(len(indexes) - 1):
   folium.vector_layers.PolyLine(points[indexes[i]:indexes[i+1]], popup=plate, color='red', fill=False).add_to(plate_layer)
-      plate_layer.add_to(complete_map)
+  plate_layer.add_to(complete_map)
 
 
 # Define feature groups for all earthquakes and those with tsunamis
