@@ -105,7 +105,7 @@ mag_5_7 = folium.FeatureGroup(name='Magnitude 5-7')
 mag_7_8 = folium.FeatureGroup(name='Magnitude 7-8')
 mag_8 = folium.FeatureGroup(name='Magnitude >8')
 
-for index, row in df.iterrows():
+for index, row in tectonic_plates.iterrows():
     popup_str = get_popup(row)
     color = get_color(row['magnitude'])
     
