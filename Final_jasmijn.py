@@ -357,6 +357,7 @@ with tab2:
   
 with tab3:
   st.header('2D Analyse')
+  
   st.plotly_chart(fig3)
   st.write('De meeste aardbevingen zijn in Azie ontstaan')
   st.write('In het continent Azie is er veel data over gaps. Ondanks dat zijn de grootste gaps gemeten in Noord-America, namelijk in Mexico. Hier is een gap van 239 degrees gemeten.')
@@ -364,15 +365,30 @@ with tab3:
   
   
   st.plotly_chart(fig4)
-  st.pyplot(fig5)
-  st.plotly_chart(fig6)
-  st.plotly_chart(fig7)
-  st.plotly_chart(fig8)
-  st.plotly_chart(fig9)
-  st.plotly_chart(fig10)
-  st.plotly_chart(fig11)
+  st.write('In Azie is er veel data over de gaps, maar in Noord-Amerika zijn de grootste gaps gemeten.')
   
-  with tab4:
+  st.pyplot(fig5)
+  st.plotly_chart(fig10)
+  st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude resulteert in een evenement met een hogere significantie .')
+  
+  st.plotly_chart(fig6)
+  st.write('Uit deze chart is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture.')
+  
+  st.plotly_chart(fig11)
+  st.write('In tegenstelling tot het vorige plot is er wel een duidelijk verband te zien tussen de accuratie van de magnitude voorspelling en de diepte waarop de aardbeving rupture zich bevind. Hoe dieper de rupture hoe minder accuraat de voorspelling.')
+ 
+  st.plotly_chart(fig7)
+  st.write('Het valt op dat de accuratie van de alerts afgegeven niet altijd even goed is.')
+  st.write('In 2010 was er een rood alert afgegeven voor een aarbeving met magnitude 7.2 terwijl in 2012 een groen alert was afgegeven voor een aardbeving van magnitude 8.2.')
+  
+  st.plotly_chart(fig8)
+  st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami')
+  
+  st.plotly_chart(fig9)
+  st.write('Deze grafiek is alleen relevant voor Azie en Zuid-Amerika, hier is bij beide continenten te zien dat de hoogte van de maan gemiddeld hoger ligt bij het voorkomen van een tsunami'.)
+  
+  
+ with tab4:
     st.header('Map')
     #st_folium(complete_map)            
 
