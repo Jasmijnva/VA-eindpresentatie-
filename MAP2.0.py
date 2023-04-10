@@ -99,9 +99,8 @@ for plate in plates:
   points = list(zip(lats, lons))
   indexes = [None] + [i + 1 for i, x in enumerate(points) if i < len(points) - 1 and abs(x[1] - points[i + 1][1]) > 300] + [None]
 
-
-    for i in range(len(indexes) - 1):
-      folium.vector_layers.PolyLine(points[indexes[i]:indexes[i+1]], popup=plate, color='red', fill=False).add_to(plate_layer)
+for i in range(len(indexes) - 1):
+  folium.vector_layers.PolyLine(points[indexes[i]:indexes[i+1]], popup=plate, color='red', fill=False).add_to(plate_layer)
       plate_layer.add_to(complete_map)
 
 
