@@ -355,7 +355,7 @@ with tab2:
     st.plotly_chart(fig2)  
   st.write('Meer dan 60% van de aardbevingen hebben geen tsunami')
   
-with tab3:
+  with tab3:
   st.header('2D Analyse')
   
   st.plotly_chart(fig3)
@@ -387,10 +387,10 @@ with tab3:
   st.plotly_chart(fig9)
   st.write('Deze grafiek is alleen relevant voor Azie en Zuid-Amerika, hier is bij beide continenten te zien dat de hoogte van de maan gemiddeld hoger ligt bij het voorkomen van een tsunami.')
   
-  
-    with tab4:
-      st.header('Map')
-      #st_folium(complete_map)            
+with tab4:
+  st.header('Map')
+  #st_folium(complete_map)     
+             
 
 
 
