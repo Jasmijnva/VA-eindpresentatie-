@@ -88,11 +88,9 @@ def get_popup(row):
 
 complete_map = folium.Map()
 
- 
 
 plate_layer = folium.FeatureGroup(name='Tectonic Plates')
 
- 
 
 plates = list(tectonic_plates['plate'].unique())
 for plate in plates:
@@ -102,13 +100,11 @@ for plate in plates:
     points = list(zip(lats, lons))
     indexes = [None] + [i + 1 for i, x in enumerate(points) if i < len(points) - 1 and abs(x[1] - points[i + 1][1]) > 300] + [None]
 
- 
 
     for i in range(len(indexes) - 1):
         folium.vector_layers.PolyLine(points[indexes[i]:indexes[i+1]], popup=plate, color='red', fill=False).add_to(plate_layer)
 plate_layer.add_to(complete_map)
 
- 
 
 # Define feature groups for all earthquakes and those with tsunamis
 all_quakes = folium.FeatureGroup(name='All earthquakes')
@@ -119,7 +115,6 @@ mag_5_7 = folium.FeatureGroup(name='Magnitude 5-7')
 mag_7_8 = folium.FeatureGroup(name='Magnitude 7-8')
 mag_8 = folium.FeatureGroup(name='Magnitude >8')
 
- 
 
 # Add markers for each earthquake to the appropriate feature group
 for index, row in df.iterrows():
@@ -149,8 +144,6 @@ for index, row in df.iterrows():
         tsunami_quakes.add_child(tsunami_marker)
 
 
- 
-
 complete_map.add_child(all_quakes)
 complete_map.add_child(tsunami_quakes)
 complete_map.add_child(mag_2_3)
@@ -163,11 +156,9 @@ folium.LayerControl(position='bottomleft', collapsed=False).add_to(complete_map)
 
 folium.LayerControl().add_to(complete_map)
 
- 
 
 complete_map
 
- 
 
 #Op de bovenstaande map is een overzicht van alle locaties van aardbevingen te zien wereldwijd. De kleuren van de markers geven de magnitude aan van de aardbevingen. Alle aardbevingen onder de 3 hebben een groene kleur, alles tussen de 3 en 5 heeft een
 
