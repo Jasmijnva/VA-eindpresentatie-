@@ -145,3 +145,5 @@ folium.LayerControl(position='bottomleft', collapsed=False).add_to(complete_map)
 folium.LayerControl().add_to(complete_map)
 
 complete_map
+
+st_data = st_folium(complete_map, width=725)
