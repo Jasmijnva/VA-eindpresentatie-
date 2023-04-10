@@ -124,7 +124,7 @@ for index, row in df.iterrows():
     mag_2_3.add_child(marker)
   elif 3 <= row['magnitude'] < 5:
     mag_3_5.add_child(marker)
-  elif 5 <= row['magnitude'] < 7:
+    elif 5 <= row['magnitude'] < 7:
     mag_5_7.add_child(marker)
   elif 7 <= row['magnitude'] < 8:
     mag_7_8.add_child(marker)
