@@ -84,8 +84,6 @@ def get_color(value):
 def get_popup(row):
   return f"Location: {row['location']}<br>Magnitude: {row['magnitude']}"
 
- 
-
 # Create feature groups for different earthquake magnitudes
 
  
