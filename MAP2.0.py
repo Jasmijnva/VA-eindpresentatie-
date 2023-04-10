@@ -119,9 +119,7 @@ for index, row in df.iterrows():
   popup_str = get_popup(row)
   color = get_color(row['magnitude'])
 
-  marker = folium.Marker(location=[row['latitude'], row['longitude']],
-                           popup=popup_str,
-                           icon=folium.Icon(color=color))
+  marker = folium.Marker(location=[row['latitude'], row['longitude']],popup=popup_str,icon=folium.Icon(color=color))
     if row['magnitude'] < 3:
       mag_2_3.add_child(marker)
     elif 3 <= row['magnitude'] < 5:
@@ -136,9 +134,7 @@ for index, row in df.iterrows():
     all_quakes.add_child(marker)
 
     if row['tsunami'] == 1:
-      tsunami_marker = folium.Marker(location=[row['latitude'], row['longitude']],
-                                       popup=popup_str,
-                                       icon=folium.Icon(color=color))
+      tsunami_marker = folium.Marker(location=[row['latitude'], row['longitude']],popup=popup_str,icon=folium.Icon(color=color))
       tsunami_quakes.add_child(tsunami_marker)
 
 
