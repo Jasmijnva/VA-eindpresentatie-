@@ -382,10 +382,10 @@ with tab3:
   st.write('In 2010 was er een rood alert afgegeven voor een aarbeving met magnitude 7.2 terwijl in 2012 een groen alert was afgegeven voor een aardbeving van magnitude 8.2.')
   
   st.plotly_chart(fig8)
-  st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami')
+  st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami.')
   
   st.plotly_chart(fig9)
-  st.write('Deze grafiek is alleen relevant voor Azie en Zuid-Amerika, hier is bij beide continenten te zien dat de hoogte van de maan gemiddeld hoger ligt bij het voorkomen van een tsunami'.)
+  st.write('Deze grafiek is alleen relevant voor Azie en Zuid-Amerika, hier is bij beide continenten te zien dat de hoogte van de maan gemiddeld hoger ligt bij het voorkomen van een tsunami.')
   
   
  with tab4:
