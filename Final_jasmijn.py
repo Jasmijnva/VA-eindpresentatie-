@@ -97,7 +97,8 @@ df_mag=df_mag.rename(columns={"index": "Magnitude", "magnitude": "Count"})
 
 
 #figuur overzicht aantal magnitudes
-fig1 = px.bar(df_mag, x="Magnitude", y='Count', title="Aantal aardbevingen per magnitude")
+fig1 = px.bar(df_mag, x="Magnitude", y='Count', title="Aantal aardbevingen per magnitude", labels={"Count": "Aantal"
+                 })
 fig1.update_layout(xaxis = dict(dtick = 0.1))
 fig1.show()
 
@@ -112,14 +113,16 @@ fig2.show()
 
 #pie chart van percentage tsunami's per continent 
 df_grouped = df.groupby('continent')['tsunami'].value_counts().reset_index(name='counts')
-fig3 = px.pie(df_grouped, values = 'counts', names = 'continent', color_discrete_sequence=["red", "green", "blue", "goldenrod", "magenta"],title='Percentage aardbevingen per continent')
+fig3 = px.pie(df_grouped, values = 'counts', names = 'continent', color_discrete_sequence=["red", "green", "blue", "goldenrod", "magenta"],labels={
+                     "continent": "Continent"}, title='Percentage aardbevingen per continent')
 fig3.show()
 
 
 #bar chart van gap's per continent 
 fig4 = px.bar(df, y="continent", x="gap", color="continent", orientation="h", hover_name="country",
              color_discrete_sequence=["red", "green", "blue", "goldenrod", "magenta"],
-             title="Gaps per continent"
+             title="Gaps per continent", labels={
+                     "continent": "Continent", "gap": "Gap"}
             )
 
 fig4.show()
@@ -135,11 +138,13 @@ plt.title('Heatmap van interessante kolommen dataframe')
 fig5.show()
 #nst = the total number of seismic stations used to determine earthquake location
 
-fig6 = px.scatter(df, y='magnitude', x='depth', title='Geen verband tussen de magnitude en de rupture diepte')
+fig6 = px.scatter(df, y='magnitude', x='depth', title='Geen verband tussen de magnitude en de rupture diepte', labels={
+                     "magnitude": "Magnitude", "depth": "Diepte"})
 #hieruit is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture
 
 
-fig7 = px.scatter(df, x="year", y="magnitude", color="alert", color_discrete_sequence=["green", "yellow", "orange", "red"], title='Verhouding tussen de magnitude en het alert per jaar')
+fig7 = px.scatter(df, x="year", y="magnitude", color="alert", color_discrete_sequence=["green", "yellow", "orange", "red"], labels={
+                     "year": "Jaar", "magnitude": "Magnitude"}, title='Verhouding tussen de magnitude en het alert per jaar')
 fig7.show()
 #hier zien we dat in 2010 een magnitude 'red' was afgegeven en in 2012 de hoogste magnitude 'yellow' was. 
 #zegt deze data wel iets gezien hoogste magnitude eigenlijk 9.1 is? 
@@ -152,12 +157,12 @@ solar = solar[['earthquake.time', 'earthquake.latitude', 'earthquake.longitude',
 new_df = pd.merge(solar, df,  how='inner', left_on=['earthquake.latitude','earthquake.longitude'], right_on = ['latitude','longitude'])
 
 
-fig8 = px.box(df, x='continent', y='magnitude', title = 'Boxplot magnitude per continent met en zonder tsunami', color = 'tsunami')
+fig8 = px.box(df, x='continent', y='magnitude', labels={"continent": "Continent", "magnitude": "Magnitude"}, title = 'Boxplot magnitude per continent met en zonder tsunami', color = 'tsunami')
 fig8.show()
 #we zien hier een uitschieter van mag 8.8 in South America bij geen tsunami
 #laagst gemeten mag is 6.5
 
-fig9 = px.box(new_df, x='tsunami', y='Moon.height', color='continent', title='Verband tussen de stand van de maan tegenover het voorkomen van een tsunami')
+fig9 = px.box(new_df, x='tsunami', y='Moon.height', color='continent', labels={"tsunami": "Tsunami", "Moon.height": "Hoogte van de maan"}, title='Verband tussen de stand van de maan tegenover het voorkomen van een tsunami')
 
 fig9.update_layout(
     updatemenus=[
@@ -199,12 +204,12 @@ fig9.show()
 #bij de slider optie 'all continents' kunnen de continenten allemaal vergeleken worden.
 
 
-fig10= px.scatter(new_df, x='sig', y='magnitude', animation_frame="year",trendline = 'ols', title='Verband tussen de significantie van een aardbeving en de magnitude')
+fig10= px.scatter(new_df, x='sig', y='magnitude', animation_frame="year",trendline = 'ols', labels={"sig": "Significantie", "magnitude":"Magnitude"}, title='Verband tussen de significantie van een aardbeving en de magnitude')
 fig10.show()
 #hier zien we een duidelijk verschil tussen significantie van de aardbeving en de magnitude. 
 #de trendlijn zal van 2001 steeds minder steil stijgen naar aanloop van 2016
 
-fig11=px.scatter(df, x= 'depth', y='difference rep vs. est', color='depth', color_discrete_sequence=["green", "yellow", "orange", "red"], trendline='ols', title='Verband tussen de accuratie van de magnitude voorspelling en de rupturediepte')
+fig11=px.scatter(df, x= 'depth', y='difference rep vs. est', color='depth', color_discrete_sequence=["green", "yellow", "orange", "red"],labels={"depth": "Diepte", "difference rep vs. est":"Verschil waargenomen en verwachte magnitude"}, trendline='ols', title='Verband tussen de accuratie van de magnitude voorspelling en de rupturediepte')
 fig11.show()
 
 #Folium map
