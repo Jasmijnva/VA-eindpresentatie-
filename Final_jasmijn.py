@@ -331,7 +331,7 @@ with tab1:
   st.write('Latitude / Longitude: Coördinatenstelsel waarmee de positie of plaats van een plaats op het aardoppervlak kan worden bepaald en beschreven.')
   st.write('Location: Locatie in het land.')
   st.write('Continent: Continent van het door de aardbeving getroffen land.')
-  st.write('Country: getroffen land.')
+  st.write('Country: Getroffen land.')
   st.write('Diff rep vs. est: Verschil tussen de gerapporteerde en de geschatte intensiteit voor het gebeurtenissenbereik.')
   
   st.header('Betekenissen alerts:')
