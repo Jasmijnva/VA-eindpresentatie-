@@ -71,15 +71,15 @@ tectonic_plates = pd.read_csv('all.csv')
 
 def get_color(value):
   if value < 3:
-        return 'green'
-    elif 3 < value < 5:
-        return 'yellow'
-    elif 5 < value < 7:
-        return 'orange'
-    elif 7 < value < 8:
-        return 'red'
-    else:
-        return 'black'
+    return 'green'
+  elif 3 < value < 5:
+    return 'yellow'
+  elif 5 < value < 7:
+    return 'orange'
+  elif 7 < value < 8:
+    return 'red'
+  else:
+    return 'black'
 # Define a function to get the popup content
 def get_popup(row):
     return f"Location: {row['location']}<br>Magnitude: {row['magnitude']}"
