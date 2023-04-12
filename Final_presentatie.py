@@ -340,7 +340,7 @@ with tab1:
   
   
 with tab2:
-  st.header('1D Analyse')
+  st.header('Data exploratie')
   col1, col2 = st.columns([250, 10])
   with col1:
     st.plotly_chart(fig1)
@@ -358,12 +358,13 @@ with tab2:
   st.write('In het continent Azie is er veel data over gaps. Ondanks dat zijn de grootste gaps gemeten in Noord-America, namelijk in Mexico. Hier is een gap van 239 degrees gemeten.')
   st.write('Met deze data zijn we verder gaan zoeken naar een verband met gaps.')
   
-with tab3:
-  st.header('2D Analyse')
   
-  
-  st.plotly_chart(fig4)
+   st.plotly_chart(fig4)
   st.write('In Azie is er veel data over de gaps, maar in Noord-Amerika zijn de grootste gaps gemeten.')
+  
+with tab3:
+  st.header('Verbanden')
+  
   
   st.pyplot(fig5)
   st.plotly_chart(fig10)
