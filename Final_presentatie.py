@@ -390,19 +390,22 @@ with col8:
   st.write('Het valt op dat de accuratie van de alerts afgegeven niet altijd even goed is.')
   st.write('In 2010 was er een rood alert afgegeven voor een aarbeving met magnitude 7.2 terwijl in 2012 een groen alert was afgegeven voor een aardbeving van magnitude 8.2.')
   
-  st.plotly_chart(fig8)
+  col9, col10 = st.columns([250, 20])
+  with col9:
+    st.plotly_chart(fig8)
   st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami.')
   
-  st.plotly_chart(fig9)
+  with col10:
+    st.plotly_chart(fig9)
   st.write('Deze grafiek is alleen relevant voor Azie en Zuid-Amerika, hier is bij beide continenten te zien dat de hoogte van de maan gemiddeld hoger ligt bij het voorkomen van een tsunami.')
   
 with tab4:
   st.header('Map')
-  col5, col6 = st.columns([270, 5])
-  with col5: 
+  col11, col12 = st.columns([270, 5])
+  with col11: 
     st.write('In deze map zijn de locaties van alle aarbevingen van de dataset te zien in combinatie met de locatie van de tectonische aardplaten. Het valt op dat de meeste aardbevingen zich bevinden rondom een aardplaat, wat uiteraard logisch is aangezien aardbevingen ontstaan door verschuivingen van deze aardplaten.')
     st_folium(complete_map, width=1200)
-    with col6:
+    with col12:
       st.image(image2, width=75)
              
 
