@@ -305,7 +305,7 @@ st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd 2001-20
 st.caption('Bron: Kaggle (CHIRAG CHAUHAN)')
 
 
-tab1, tab2, tab3, tab4 = st.tabs(["Dataset", "1D Analyse", "2D Analyse", "Map"])
+tab1, tab2, tab3, tab4 = st.tabs(["Dataset", "Data exploratie", "Verbanden", "Map"])
 
 with tab1:
   st.header('Overzicht dataframe:')
