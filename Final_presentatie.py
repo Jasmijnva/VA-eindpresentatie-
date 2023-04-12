@@ -341,7 +341,7 @@ with tab1:
   
 with tab2:
   st.header('Data exploratie')
-  col1, col2 = st.columns([250, 10])
+  col1, col2 = st.columns([250, 20])
   with col1:
     st.plotly_chart(fig1)
     
