@@ -395,7 +395,7 @@ with col8:
   with col9:
     st.plotly_chart(fig8)
     
-    st.columns(st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami.'))
+    st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami.')
   
   with col10:
     st.plotly_chart(fig9)
