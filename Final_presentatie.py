@@ -353,12 +353,14 @@ with tab2:
     st.plotly_chart(fig2)  
   st.write('Meer dan 60% van de aardbevingen hebben geen tsunami')
   
+  col3 col4 = st.columns([250, 20])
+  with col3:
   st.plotly_chart(fig3)
   st.write('De meeste aardbevingen zijn in Azie ontstaan')
   st.write('In het continent Azie is er veel data over gaps. Ondanks dat zijn de grootste gaps gemeten in Noord-America, namelijk in Mexico. Hier is een gap van 239 degrees gemeten.')
   st.write('Met deze data zijn we verder gaan zoeken naar een verband met gaps.')
   
-  
+  with col4: 
   st.plotly_chart(fig4)
   st.write('In Azie is er veel data over de gaps, maar in Noord-Amerika zijn de grootste gaps gemeten.')
   
