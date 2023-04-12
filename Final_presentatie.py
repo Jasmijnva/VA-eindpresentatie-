@@ -369,17 +369,23 @@ with tab2:
 with tab3:
   st.header('Verbanden')
   
-  
-  st.pyplot(fig5)
+  col5, col6 = st.columns([250, 20])
+  with col5:
+    st.pyplot(fig5)
   st.plotly_chart(fig10)
   st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude resulteert in een evenement met een hogere significantie .')
   
-  st.plotly_chart(fig6)
+  with col6:
+    st.plotly_chart(fig6)
   st.write('Uit deze chart is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture.')
   
-  st.plotly_chart(fig11)
+  
+  col7, col8 = st.columns([250, 20])
+  with col7: 
+    st.plotly_chart(fig11)
   st.write('In tegenstelling tot het vorige plot is er wel een duidelijk verband te zien tussen de accuratie van de magnitude voorspelling en de diepte waarop de aardbeving rupture zich bevind. Hoe dieper de rupture hoe minder accuraat de voorspelling.')
  
+with col8:
   st.plotly_chart(fig7)
   st.write('Het valt op dat de accuratie van de alerts afgegeven niet altijd even goed is.')
   st.write('In 2010 was er een rood alert afgegeven voor een aarbeving met magnitude 7.2 terwijl in 2012 een groen alert was afgegeven voor een aardbeving van magnitude 8.2.')
