@@ -396,7 +396,7 @@ with tab4:
   with col5: 
     st_folium(complete_map, width=1200)
     with col6:
-      st.image(image2, width=100)
+      st.image(image2, width=75)
              
 
 
