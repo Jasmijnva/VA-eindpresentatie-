@@ -387,7 +387,7 @@ with tab3:
   
 with tab4:
   st.header('Map')
-  st_folium(complete_map)     
+  st_folium(complete_map, width=1200)     
              
 
 
