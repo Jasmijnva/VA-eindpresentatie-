@@ -394,6 +394,7 @@ with tab4:
   st.header('Map')
   col5, col6 = st.columns([270, 5])
   with col5: 
+    st.write('In deze map zijn de locaties van alle aarbevingen van de dataset te zien in combinatie met de locatie van de tectonische aardplaten. Het valt op dat de meeste aardbevingen zich bevinden rondom een aardplaat, wat uiteraard logisch is aangezien aardbevingen ontstaan door verschuivingen van deze aardplaten.')
     st_folium(complete_map, width=1200)
     with col6:
       st.image(image2, width=75)
