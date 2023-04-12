@@ -345,12 +345,13 @@ with tab2:
   with col1:
     st.plotly_chart(fig1)
     
-  st.header('Conclusies data explanatory')
+  st.header('Conclusie aardbevingen vs magnitude')
   st.write('Zoals we kunnen zien zijn er veel aardbevingen die in de magnitude 6.5 geschaald zijn')
   st.write('Er is een enkele aardbeving in de magnitude 9.1, hier hebben we verder onderzoek naar gedaan')
 
   with col2:
     st.plotly_chart(fig2)  
+  st.header('Conclusie aardbevingen vs tsunami')
   st.write('Meer dan 60% van de aardbevingen hebben geen tsunami')
   
   col3, col4 = st.columns([270, 5])
