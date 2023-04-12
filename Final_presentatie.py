@@ -350,8 +350,7 @@ with tab2:
   st.write('Er is een enkele aardbeving in de magnitude 9.1, hier hebben we verder onderzoek naar gedaan')
 
   with col2:
-    st.plotly_chart(fig2) 
-  col1, col2 = st.columns([250, 20])  
+    st.plotly_chart(fig2)   
   st.header('Conclusie aardbevingen vs tsunami')
   st.write('Meer dan 60% van de aardbevingen hebben geen tsunami')
   
