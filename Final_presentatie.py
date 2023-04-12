@@ -387,6 +387,7 @@ with tab3:
  
 with col8:
   st.plotly_chart(fig7)
+  st.subheader('Conclusie alerts vs magnitude')
   st.write('Het valt op dat de accuratie van de alerts afgegeven niet altijd even goed is.')
   st.write('In 2010 was er een rood alert afgegeven voor een aarbeving met magnitude 7.2 terwijl in 2012 een groen alert was afgegeven voor een aardbeving van magnitude 8.2.')
   
