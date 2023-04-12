@@ -355,7 +355,7 @@ with tab2:
   
   col3, col4 = st.columns([250, 20])
   with col3:
-  st.plotly_chart(fig3)
+    st.plotly_chart(fig3)
   st.write('De meeste aardbevingen zijn in Azie ontstaan')
   st.write('In het continent Azie is er veel data over gaps. Ondanks dat zijn de grootste gaps gemeten in Noord-America, namelijk in Mexico. Hier is een gap van 239 degrees gemeten.')
   st.write('Met deze data zijn we verder gaan zoeken naar een verband met gaps.')
