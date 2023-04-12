@@ -297,6 +297,7 @@ folium.LayerControl().add_to(complete_map)
 
 
 image = Image.open('earthquake_.jpg')
+image2 = Image.open('Legenda folium map.jpg')
 ######################################################################################################
 
 st.image(image, caption='Bron: inszoneinsurance.com', width=1200)
@@ -391,7 +392,11 @@ with tab3:
   
 with tab4:
   st.header('Map')
-  st_folium(complete_map, width=1200)     
+  col5, col6 = st.columns([270, 5])
+  with col5: 
+    st_folium(complete_map, width=1200)
+    with col6:
+      st.image(image2)
              
 
 
