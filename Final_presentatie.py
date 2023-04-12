@@ -361,7 +361,7 @@ with tab2:
   st.write('Met deze data zijn we verder gaan zoeken naar een verband met gaps.')
   
   with col4: 
-  st.plotly_chart(fig4)
+    st.plotly_chart(fig4)
   st.write('In Azie is er veel data over de gaps, maar in Noord-Amerika zijn de grootste gaps gemeten.')
   
 with tab3:
