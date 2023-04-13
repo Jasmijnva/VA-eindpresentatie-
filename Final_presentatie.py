@@ -304,7 +304,7 @@ st.image(image, caption='Bron: inszoneinsurance.com', width=1200)
 st.title('Solar system and Earthquakes')
 st.header('Een inzicht in de data verzameld over aardbevingen wereldwijd 2001-2022')
 st.caption('Bron: Kaggle (CHIRAG CHAUHAN)')
-st.text('Door: Yvette van Bers en Jasmijn van Althuis')
+st.caption('Door: Yvette van Bers en Jasmijn van Althuis')
 
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Dataset", "Data exploratie", "Verbanden", "Invloed van de maan", "Map"])
