@@ -370,9 +370,12 @@ with tab2:
 with tab3:
   st.header('Verbanden')
   
-  #col5 = st.columns([270, 5])
-  #with col5:
+  col5, col14 = st.columns([270, 5])
+  with col5:
   st.pyplot(fig5)
+  
+  with col14:
+    st.write('Hier kan nog wat tekst')
   
   
   col6, col7 = st.columns([250, 5])
