@@ -375,6 +375,7 @@ with tab3:
     st.pyplot(fig5)
   
   with col14:
+    st.subheader('Conclusies verbanden')
     st.write('We hebben niet verder gekeken naar de significantie vs. estimated intensity omdat: ')
   
   
