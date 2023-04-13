@@ -409,8 +409,8 @@ with tab3:
   st.write('Wat wel duidelijk is geworden uit deze plot is dat bij een minimale rupture diepte, de accuratie van de intensity slechter voorspeld is.')
   st.subheader('Conclusie alerts vs magnitude')
   st.write('Het valt op dat de accuratie van de alerts afgegeven niet altijd even goed is.')
-  st.write('In 2010 was er een rood alert afgegeven voor een aarbeving met magnitude 7.2 terwijl in 2012 een groen alert was afgegeven voor een aardbeving van magnitude 8.2.')
-  st.write('WAT IS HIER EEN LOGISCHE VERKLARING VOOR?') 
+  st.write('In 2010 was er een rood alert afgegeven voor een aarbeving met magnitude 7.2 terwijl in 2012 een groen alert was afgegeven voor een aardbeving van magnitude 8.2. Hier komen we later op terug wanneer we de volle maan gaan vergelijken met aardbevingen en tsunami s.')
+  
   
 with col9:
   st.plotly_chart(fig7)
@@ -422,9 +422,7 @@ with tab4:
   with col11:
     
     st.plotly_chart(fig10)
-    st.subheader('Significantie vs magnitude') 
-    st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude resulteert in een evenement met een hogere significantie .')
-  
+   
   
   with col10:
     st.plotly_chart(fig9)
@@ -440,6 +438,8 @@ with tab4:
     st.write('De wetenschappers hebben bewezen dat de zwaarste schokken relatief vaak plaatsvinden als de zon, maan en aarde op een lijn staan en de getijdenspanningen in de aardkorst toenemen. Uit de studie blijkt dat de 12 grootste aardbevingen uit de geschiedenis allemaal ontstonden in de dagen rond volle of nieuwe maan. Bij deze rampen horen onder andere de tsunami in Chili en in Japan.')
     st.write('Heeft een volle maan dan daadwerkelijk invloed op het onstaan van aardbevingen en tsunami s? Nee, de getijdenkrachten zijn slechts een factor in een complex proces. Zoals in de boxplot te zien is, zien we inderdaad bij Zuid-America een duidelijk verschil in wanneer er wel en niet een tsunami heeft plaatsgevonden bij een volle maan. Tegelijkertijd zien we ook dat er uitschieters zijn in Zuid-Amerika waarbij er geen tsunami heeft plaatsgevonden maar er toch volle maan was.')
   
+    st.subheader('Significantie vs magnitude') 
+    st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude resulteert in een evenement met een hogere significantie.')
   
 with tab5:
   st.header('Map')
