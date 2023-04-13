@@ -363,7 +363,7 @@ with tab2:
   #with col4: 
    # st.plotly_chart(fig4)
 
-  with tab3:
+ with tab3:
     st.header('Verbanden')
   
   col5, col14 = st.columns([270, 50])
