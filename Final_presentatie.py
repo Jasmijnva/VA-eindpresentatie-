@@ -376,14 +376,14 @@ with tab3:
   
   with col14:
     st.subheader('Conclusies verbanden') 
-    st.write('We hebben niet verder gekeken naar de significantie vs. estimated intensity omdat: ')
+    st.write('We hebben niet verder gekeken naar de significantie vs. estimated intensity omdat dit een logisch verband is met elkaar. Een hoge significantie is automatisch een hoge estimated intensity.')
   
   
   col6, col7 = st.columns([250, 5])
   with col6:
     st.plotly_chart(fig8)
     st.subheader('Conclusie boxplot magnitude per continent met en zonder tsunami')
-    st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami. HOE IS DIT TE VERKLAREN?')
+    st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami.')
     st.write('We zien hier een uitschieter in Zuid-Amerika. Dit betreft de aardbeving met tsunami in Chili. Op zaterdag 27 Februari 2010 is er een aardbeving waargenomen met magnitude 8,8 die in totaal 3 minuten aanhield. In totaal zijn er 525 mensen overleden 25 mensen zijn vermist geraakt en ongeveer 9% van de populatie in het getroffen gebied is zijn/haar huis verloren')
   
   
