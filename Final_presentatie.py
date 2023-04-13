@@ -419,14 +419,15 @@ with tab4:
   with col11:
     
     st.plotly_chart(fig10)
+    st.subheader('Significantie vs magnitude')
   st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude resulteert in een evenement met een hogere significantie .')
   
   
   with col10:
     st.plotly_chart(fig9)
-    st.subheader('')
+    st.subheader('Hoogte van de maan vs tsunami per continent')
     st.write('Deze grafiek is alleen relevant voor Azie en Zuid-Amerika, hier is bij beide continenten te zien dat de hoogte van de maan gemiddeld hoger ligt bij het voorkomen van een tsunami.')
-    st.write('LOGISCHE VERKLARING')
+    st.write('THEORIE VAN INTERNET ZOEKEN')
   
   
 with tab5:
