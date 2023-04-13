@@ -370,7 +370,7 @@ with tab2:
 with tab3:
   st.header('Verbanden')
   
-  col5, col14 = st.columns([270, 270])
+  col5, col14 = st.columns([270, 150])
   with col5:
     st.pyplot(fig5)
   
