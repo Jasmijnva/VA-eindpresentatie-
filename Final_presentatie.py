@@ -359,12 +359,9 @@ with tab2:
   with col3:
     st.plotly_chart(fig3)
   st.write('De meeste aardbevingen zijn in Azie ontstaan')
-  st.write('In het continent Azie is er veel data over gaps. Ondanks dat zijn de grootste gaps gemeten in Noord-America, namelijk in Mexico. Mexico is erg vatbaar voor aardbevingen omdat in dit land de drie grootste tectonische platen bij elkaar komen, de Noord-Amerikaanse plaat, de Cocosplaat en de Pacifische plaat.')
-  st.write('Met deze info kunnen we concluderen dat dit gebied erg vatbaar is voor aardbevingen.')
-  st.write('Het grootste azimutale verschil tussen azimutaal aangrenzende stations (in graden). Over het algemeen geldt: hoe kleiner dit getal, hoe betrouwbaarder de berekende horizontale positie van de aardbeving. Aardbevingslocaties met een azimutale kloof van meer dan 180 graden hebben doorgaans grote locatie- en diepteonzekerheden.')
   
   with col4: 
-    #st.plotly_chart(fig4)
+    st.plotly_chart()
 
   with tab3:
   st.header('Verbanden')
