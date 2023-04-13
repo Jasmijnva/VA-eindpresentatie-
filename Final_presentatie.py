@@ -372,7 +372,7 @@ with tab3:
   
   col5, col14 = st.columns([270, 5])
   with col5:
-  st.pyplot(fig5)
+    st.pyplot(fig5)
   
   with col14:
     st.write('Hier kan nog wat tekst')
