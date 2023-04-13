@@ -375,7 +375,7 @@ with tab3:
     st.pyplot(fig5)
   
   with col14:
-    st.write('Hier kan nog wat tekst')
+    st.write('We hebben niet verder gekeken naar de significantie vs. estimated intensity omdat: ')
   
   
   col6, col7 = st.columns([250, 5])
