@@ -391,6 +391,9 @@ with col8:
   st.write('Het valt op dat de accuratie van de alerts afgegeven niet altijd even goed is.')
   st.write('In 2010 was er een rood alert afgegeven voor een aarbeving met magnitude 7.2 terwijl in 2012 een groen alert was afgegeven voor een aardbeving van magnitude 8.2.')
   
+ 
+with tab4:
+  st.header('tab4')
   col9, col10 = st.columns([250, 5])
   with col9:
     st.plotly_chart(fig8)
@@ -401,7 +404,8 @@ with col8:
     st.plotly_chart(fig9)
     st.write('Deze grafiek is alleen relevant voor Azie en Zuid-Amerika, hier is bij beide continenten te zien dat de hoogte van de maan gemiddeld hoger ligt bij het voorkomen van een tsunami.')
   
-with tab4:
+  
+with tab5:
   st.header('Map')
   col11, col12 = st.columns([270, 5])
   with col11: 
