@@ -120,7 +120,7 @@ fig3.show()
 
 #bar chart van gap's per continent 
 fig4 = px.bar(df, y="continent", x="gap", color="continent", orientation="h", hover_name="country",
-             color_discrete_sequence=["magenta", "green", "blue", "green", "goldenrod", "yellow"],
+             color_discrete_sequence=["magenta", "red", "blue", "green", "goldenrod", "yellow"],
              title="Gaps per continent", labels={
                      "continent": "Continent", "gap": "Gap"}
             )
