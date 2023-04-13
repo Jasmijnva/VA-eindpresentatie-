@@ -432,7 +432,7 @@ with tab4:
     st.write('Bij deze plot hebben we gekeken of de theorie klopt dat bij een volle maan meer kans is op een tsunami.')
     st.write('Wetenschappers aan de Universiteit van Tokyo hebben de periodes waarin sprake is van hoge getijdenstress onder de loep genomen.')
     st.write('Hoge getijdenstress is een fenomeen dat 2x per maand plaatsvindt tijdens volle maan en nieuwe maan.')
-    st.write('De zee komt dan het verst bij vloed en trekt zich ook het verst terug bij eb. De bewegingen van die enorme hoeveelheid zeewater zet meer druk op de breuklijnen.')
+    st.write('De zee komt dan het verst bij vloed en trekt zich ook het verst terug bij eb. De bewegingen van die enorme hoeveelheid zeewater zet meer druk op de breuklijnen. Ook de maan en de zon trekken met hun zwaartekracht aan de aarde. Doordat deze 3 hemellichamen rondjes om elkaar heen draaien, veranderen deze zwaartekrachten voortdurend van sterkte en richting. Dit veroorzaakt een rimitsche getijdenspanning in de aardkorst waarbij de breuken nog een extra zetje krijgen.')
     st.write('Deze druk kan een van de oorzaken zijn dat bijvoorbeeld kleine aardbevingen heel groot worden.')
     st.write('Dit verklaart ook meteen het verschil in alert en magnitude van de vorige pagina.')
            
