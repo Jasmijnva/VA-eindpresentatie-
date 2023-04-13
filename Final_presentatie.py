@@ -398,13 +398,13 @@ with tab3:
     st.write('In deze plot is een trendline weergegeven die als R^2 een 0.019784 aangeeft. De R Squared geeft aan hoeveel van de variantie in de afhankelijk variabele verklaard wordt door de verklarende variabelen.')
     st.write('In dit geval verklaart de variabele diepte voor 1,9% het verschil tussen de predicted en estimated intensity.')
     st.write('Wat wel duidelijk is geworden uit deze plot is dat bij een minimale rupture diepte, de accuratie van de intensity slechter voorspeld is.')
- 
-  with col9:
-    st.plotly_chart(fig7)
     st.subheader('Conclusie alerts vs magnitude')
     st.write('Het valt op dat de accuratie van de alerts afgegeven niet altijd even goed is.')
     st.write('In 2010 was er een rood alert afgegeven voor een aarbeving met magnitude 7.2 terwijl in 2012 een groen alert was afgegeven voor een aardbeving van magnitude 8.2. Hier komen we later op terug wanneer we de volle maan gaan vergelijken met aardbevingen en tsunami s.')
   
+  with col9:
+    st.plotly_chart(fig7)
+        
  
 with tab4:
   st.header('Invloed van de maan')
