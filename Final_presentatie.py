@@ -357,7 +357,7 @@ with tab2:
   
   #col3, col4= st.columns([270, 5])
   #with col3:
-    st.plotly_chart(fig3)
+  st.plotly_chart(fig3)
   st.write('De meeste aardbevingen zijn in Azie ontstaan')
   
   #with col4: 
