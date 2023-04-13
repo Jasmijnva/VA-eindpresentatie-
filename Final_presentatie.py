@@ -370,13 +370,13 @@ with tab2:
 with tab3:
   st.header('Verbanden')
   
-  col5, col14 = st.columns([270, 50])
+  with st.expander:
+    col5, col14 = st.columns([270, 50])
   with col5:
     st.pyplot(fig5)
   
   with col14:
-    st.subheader('Conclusies verbanden')
-  with st.expander: 
+    st.subheader('Conclusies verbanden') 
     st.write('We hebben niet verder gekeken naar de significantie vs. estimated intensity omdat: ')
   
   
