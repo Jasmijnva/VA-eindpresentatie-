@@ -419,7 +419,8 @@ with tab4:
   with col11:
     
     st.plotly_chart(fig10)
-    st.subheader('Significantie vs magnitude') st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude resulteert in een evenement met een hogere significantie .')
+    st.subheader('Significantie vs magnitude') 
+    st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude resulteert in een evenement met een hogere significantie .')
   
   
   with col10:
