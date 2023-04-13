@@ -138,7 +138,7 @@ plt.title('Heatmap van interessante kolommen dataframe')
 fig5.show()
 #nst = the total number of seismic stations used to determine earthquake location
 
-fig6 = px.scatter(df, y='magnitude', x='depth', title='Geen verband tussen de magnitude en de rupture diepte', labels={
+fig6 = px.scatter(df, y='magnitude', x='depth', title='Verband tussen de magnitude en de rupture diepte', labels={
                      "magnitude": "Magnitude", "depth": "Diepte"})
 #hieruit is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture
 
@@ -382,9 +382,11 @@ with tab3:
   col6, col7 = st.columns([250, 5])
   with col6:
     st.plotly_chart(fig8)
-    st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami.')
+    st.subheader('Conclusie boxplot magnitude per continent met en zonder tsunami')
+    st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami. HOE IS DIT TE VERKLAREN?')
   with col7:
     st.plotly_chart(fig6)
+  st.subheader('Conclusie magnitude vs diepte van de rupture')
   st.write('Uit deze chart is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture.')
   
   
