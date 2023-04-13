@@ -373,21 +373,21 @@ with tab2:
 with tab3:
   st.header('Verbanden')
   
-  col5, col6 = st.columns([250, 5])
-  with col5:
+  col6, col7 = st.columns([250, 5])
+  with col6:
     st.plotly_chart(fig8)
     st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami.')
-  with col6:
+  with col7:
     st.plotly_chart(fig6)
   st.write('Uit deze chart is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture.')
   
   
-  col7, col8 = st.columns([250, 5])
-  with col7: 
+  col8, col9 = st.columns([250, 5])
+  with col8: 
     st.plotly_chart(fig11)
   st.write('In tegenstelling tot het vorige plot is er wel een duidelijk verband te zien tussen de accuratie van de magnitude voorspelling en de diepte waarop de aardbeving rupture zich bevind. Hoe dieper de rupture hoe minder accuraat de voorspelling.')
  
-with col8:
+with col9:
   st.plotly_chart(fig7)
   st.subheader('Conclusie alerts vs magnitude')
   st.write('Het valt op dat de accuratie van de alerts afgegeven niet altijd even goed is.')
@@ -396,8 +396,8 @@ with col8:
  
 with tab4:
   st.header('tab4')
-  col10, col9 = st.columns([250, 5])
-  with col9:
+  col10, col11 = st.columns([250, 5])
+  with col11:
     st.plotly_chart(fig8)
     
     st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami.')
@@ -413,11 +413,11 @@ with tab4:
   
 with tab5:
   st.header('Map')
-  col11, col12 = st.columns([270, 5])
-  with col11: 
+  col12, col13 = st.columns([270, 5])
+  with col12: 
     st.write('In deze map zijn de locaties van alle aarbevingen van de dataset te zien in combinatie met de locatie van de tectonische aardplaten. Het valt op dat de meeste aardbevingen zich bevinden rondom een aardplaat, wat uiteraard logisch is aangezien aardbevingen ontstaan door verschuivingen van deze aardplaten.')
     st_folium(complete_map, width=1200)
-    with col12:
+    with col13:
       st.image(image2, width=75)
              
 
