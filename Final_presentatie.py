@@ -426,10 +426,10 @@ with tab4:
            
     st.write('Uiteraard zijn de getijdenkrachten niet de belangrijkste oorzaak van het ontstaan van aardbevingen. Aardbevingen ontstaan voornamelijk doordat de tektonische platen van de aarde tegen elkaar duwen en schuren. Daardoor neemt de druk toe op de breuklijnen, tot die zo hoog wordt dat hij plots vrijkomt in de vorm van een aardbeving.')
     st.write('De wetenschappers hebben bewezen dat de zwaarste schokken relatief vaak plaatsvinden als de zon, maan en aarde op een lijn staan en de getijdenspanningen in de aardkorst toenemen. Uit de studie blijkt dat de 12 grootste aardbevingen uit de geschiedenis allemaal ontstonden in de dagen rond volle of nieuwe maan. Bij deze rampen horen onder andere de tsunami in Chili en in Japan.')
-    st.write('Heeft een volle maan dan daadwerkelijk invloed op het onstaan van aardbevingen en tsunami s? Nee, de getijdenkrachten zijn slechts een factor in een complex proces. Zoals in de boxplot te zien is, zien we inderdaad bij Zuid-America een duidelijk verschil in wanneer er wel en niet een tsunami heeft plaatsgevonden bij een volle maan. Tegelijkertijd zien we ook dat er uitschieters zijn in Zuid-Amerika waarbij er geen tsunami heeft plaatsgevonden maar er toch volle maan was.')
+    st.write('Heeft een volle maan dan daadwerkelijk invloed op het onstaan van aardbevingen en tsunami s? Nee, de getijdenkrachten zijn slechts een factor in een complex proces. Zoals in de boxplot te zien is, zien we inderdaad bij Zuid-Amerika een duidelijk verschil in wanneer er wel en niet een tsunami heeft plaatsgevonden bij een volle maan. Tegelijkertijd zien we ook dat er uitschieters zijn in Zuid-Amerika waarbij er geen tsunami heeft plaatsgevonden maar er toch volle maan was.')
   
     st.subheader('Significantie vs magnitude') 
-    st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude resulteert in een evenement met een hogere significantie.')
+    st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude een evenement een hogere significantie heeft over de jaren heen ten opzichte van de magnitude.')
   
 with tab5:
   st.header('Map')
