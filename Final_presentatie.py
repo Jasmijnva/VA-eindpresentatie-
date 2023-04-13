@@ -392,6 +392,7 @@ with tab3:
 
   st.subheader('Conclusie magnitude vs diepte van de rupture')
   st.write('Uit deze chart is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture.')
+  st.write('Wel zien we ook bij deze plot de hoogste aardbeving ooit gemeten. Dit betreft een aardbeving in .. met een magnitude van 9.1
   
   
   col8, col9 = st.columns([250, 5])
@@ -429,12 +430,15 @@ with tab4:
     st.plotly_chart(fig9)
     st.subheader('volle maan vs tsunami per continent')
     st.write('Bij deze plot hebben we gekeken of de theorie klopt dat bij een volle maan meer kans is op een tsunami.')
-    st.write('Wetenschappers hebben de periodes waarin sprake is van hoge getijdenstress onder de loep genomen.')
+    st.write('Wetenschappers aan de Universiteit van Tokyo hebben de periodes waarin sprake is van hoge getijdenstress onder de loep genomen.')
     st.write('Hoge getijdenstress is een fenomeen dat 2x per maand plaatsvindt tijdens volle maan en nieuwe maan.')
-    st.write('De zee komt dan het verst bij vloed en trekt zich ook het verst terug bij eb. Die bewegingen van die enorme hoeveelheid zeewater zet meer druk op de breuklijnen.')
+    st.write('De zee komt dan het verst bij vloed en trekt zich ook het verst terug bij eb. De bewegingen van die enorme hoeveelheid zeewater zet meer druk op de breuklijnen.')
     st.write('Deze druk kan een van de oorzaken zijn dat bijvoorbeeld kleine aardbevingen heel groot worden.')
     st.write('Dit verklaart ook meteen het verschil in alert en magnitude van de vorige pagina.')
-    st.write('De aardbevingen die enorme tsunami s veroorzaakten in 2004 in Zuidoost-Azie...')
+           
+    st.write('Uiteraard zijn de getijdenkrachten niet de belangrijkste oorzaak van het ontstaan van aardbevingen. Aardbevingen ontstaan voornamelijk doordat de tektonische platen van de aarde tegen elkaar duwen en schuren. Daardoor neemt de druk toe op de breuklijnen, tot die zo hoog wordt dat hij plots vrijkomt in de vorm van een aardbeving.')
+    st.write('De wetenschappers hebben bewezen dat de zwaarste schokken relatief vaak plaatsvinden als de zon, maan en aarde op een lijn staan en de getijdenspanningen in de aardkorst toenemen. Uit de studie blijkt dat de 12 grootste aardbevingen uit de geschiedenis allemaal ontstonden in de dagen rond volle of nieuwe maan. Bij deze rampen horen onder andere de tsunami in Chili en in Japan.
+    st.write('Heeft een volle maan dan daadwerkelijk invloed op het onstaan van aardbevingen en tsunami s? Nee, de getijdenkrachten zijn slechts een factor in een complex proces. Zoals in de boxplot te zien is, zien we inderdaad bij Zuid-America een duidelijk verschil in wanneer er wel en niet een tsunami heeft plaatsgevonden bij een volle maan. Tegelijkertijd zien we ook dat er uitschieters zijn in Zuid-Amerika waarbij er geen tsunami heeft plaatsgevonden maar er toch volle maan was.')
   
   
 with tab5:
