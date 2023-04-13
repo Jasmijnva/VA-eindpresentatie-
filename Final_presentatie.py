@@ -403,12 +403,12 @@ with tab3:
   st.write('We hebben al gezien dat de magnitude correleert met de intensity van de aardbeving in de heatmap.') 
   st.write('In deze plot is een trendline weergegeven die als R^2 een 0.019784 aangeeft. De R Squared geeft aan hoeveel van de variantie in de afhankelijk variabele verklaard wordt door de verklarende variabelen.')
   st.write('In dit geval verklaart de variabele diepte voor 1,9% het verschil tussen de predicted en estimated intensity.')
+  st.write('Wat wel duidelijk is geworden uit deze plot is dat bij een minimale rupture diepte, de accuratie van de intensity slechter voorspeld is'.)
   st.subheader('Conclusie alerts vs magnitude')
   st.write('Het valt op dat de accuratie van de alerts afgegeven niet altijd even goed is.')
   st.write('In 2010 was er een rood alert afgegeven voor een aarbeving met magnitude 7.2 terwijl in 2012 een groen alert was afgegeven voor een aardbeving van magnitude 8.2.')
-  st.write('LOGISCHE VERKLARING') 
-  st.write('In tegenstelling tot het vorige plot is er wel een duidelijk verband te zien tussen de accuratie van de magnitude voorspelling en de diepte waarop de aardbeving rupture zich bevind. Hoe dieper de rupture hoe minder accuraat de voorspelling.')
- 
+  st.write('WAT IS HIER EEN LOGISCHE VERKLARING VOOR?') 
+  
 with col9:
   st.plotly_chart(fig7)
   
