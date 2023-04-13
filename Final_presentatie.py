@@ -392,7 +392,7 @@ with tab3:
 
   st.subheader('Conclusie magnitude vs diepte van de rupture')
   st.write('Uit deze chart is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture.')
-  st.write('Wel zien we ook bij deze plot de hoogste aardbeving ooit gemeten. Dit betreft een aardbeving in .. met een magnitude van 9.1
+  st.write('Wel zien we ook bij deze plot de hoogste aardbeving ooit gemeten. Dit betreft een aardbeving in Japan met een magnitude van 9.1')
   
   
   col8, col9 = st.columns([250, 5])
