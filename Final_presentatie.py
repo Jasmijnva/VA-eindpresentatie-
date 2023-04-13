@@ -432,7 +432,7 @@ with tab4:
     st.write('De zee komt dan het verst bij vloed en trekt zich ook het verst terug bij eb. Die bewegingen van die enorme hoeveelheid zeewater zet meer druk op de breuklijnen.')
     st.write('Deze druk kan een van de oorzaken zijn dat bijvoorbeeld kleine aardbevingen heel groot worden.')
     st.write('Dit verklaart ook meteen het verschil in alert en magnitude van de vorige pagina.')
-    st.write('De aardbevingen die enorme tsunami s veroorzaakten in 2004 in Zuidoost-Azie
+    st.write('De aardbevingen die enorme tsunami s veroorzaakten in 2004 in Zuidoost-Azie...')
   
   
 with tab5:
