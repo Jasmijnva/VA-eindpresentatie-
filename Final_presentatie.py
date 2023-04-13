@@ -361,7 +361,7 @@ with tab2:
   st.write('De meeste aardbevingen zijn in Azie ontstaan')
   
   with col4: 
-    st.plotly_chart()
+    st.plotly_chart(fig4)
 
   with tab3:
     st.header('Verbanden')
