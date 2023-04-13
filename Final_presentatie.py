@@ -385,13 +385,6 @@ with tab3:
     st.subheader('Conclusie boxplot magnitude per continent met en zonder tsunami')
     st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami. HOE IS DIT TE VERKLAREN?')
     st.write('We zien hier een uitschieter in Zuid-Amerika. Dit betreft de aardbeving met tsunami in Chili. Op zaterdag 27 Februari 2010 is er een aardbeving waargenomen met magnitude 8,8 die in totaal 3 minuten aanhield. In totaal zijn er 525 mensen overleden 25 mensen zijn vermist geraakt en ongeveer 9% van de populatie in het getroffen gebied is zijn/haar huis verloren')
-    
-  
-  
-  
-  The 2010 Chile earthquake and tsunami (Spanish: Terremoto del 27F)[6] occurred off the coast of central Chile on Saturday, 27 February at 03:34 local time (06:34 UTC),
-    having a magnitude of 8.8 on the moment magnitude scale, with intense shaking lasting for about three minutes.
-  
   
   
   with col7:
