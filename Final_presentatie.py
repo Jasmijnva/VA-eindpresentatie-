@@ -398,7 +398,7 @@ with tab3:
   
   
   
-  st.subheader('Conclusie accuratie van de magnitude en rupture diepte')
+  st.subheader('Conclusie accuratie van de magnitude vs rupture diepte')
   st.write('Voor de accuratie van de magnitude hebben we een nieuwe kolom aangemaakt die het verschil laat zien tussen de estimated intensity en de reported intensity')
   st.write('We hebben al gezien dat de magnitude correleert met de intensity van de aardbeving in de heatmap.') 
   st.write('In deze plot is een trendline weergegeven die als R^2 een 0.019784 aangeeft. De R Squared geeft aan hoeveel van de variantie in de afhankelijk variabele verklaard wordt door de verklarende variabelen.')
@@ -417,9 +417,6 @@ with tab4:
   st.header('tab4')
   col10, col11 = st.columns([250, 5])
   with col11:
-    st.plotly_chart(fig8)
-    
-    st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami.')
     
     st.plotly_chart(fig10)
   st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude resulteert in een evenement met een hogere significantie .')
@@ -427,7 +424,9 @@ with tab4:
   
   with col10:
     st.plotly_chart(fig9)
+    st.subheader('
     st.write('Deze grafiek is alleen relevant voor Azie en Zuid-Amerika, hier is bij beide continenten te zien dat de hoogte van de maan gemiddeld hoger ligt bij het voorkomen van een tsunami.')
+    st.write('LOGISCHE VERKLARING')
   
   
 with tab5:
