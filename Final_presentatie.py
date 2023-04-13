@@ -388,12 +388,12 @@ with tab3:
   with col7:
     st.plotly_chart(fig6)
  
-col14, col15 = st.columns([250, 5])
-with col14:
+col20, col21 = st.columns([250, 5])
+with col20:
   st.subheader('Conclusie boxplot magnitude per continent met en zonder tsunami')
   st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami. HOE IS DIT TE VERKLAREN?')
   
-with col15:
+with col21:
   st.subheader('Conclusie magnitude vs diepte van de rupture')
   st.write('Uit deze chart is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture.')
   
