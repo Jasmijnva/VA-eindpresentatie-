@@ -162,7 +162,7 @@ fig8.show()
 #we zien hier een uitschieter van mag 8.8 in South America bij geen tsunami
 #laagst gemeten mag is 6.5
 
-fig9 = px.box(new_df, x='tsunami', y='MoonPhase.percent', color='continent', labels={"tsunami": "Tsunami", "MoonPhase.percent": "Percentage zichtbare maan"}, title='Verband tussen de stand van de maan tegenover het voorkomen van een tsunami')
+fig9 = px.box(new_df, x='tsunami', y='MoonPhase.percent', color='continent', labels={"tsunami": "Tsunami", "MoonPhase.percent": "Percentage zichtbare maan"}, title='Verband tussen de stand van de maan tegenover het voorkomen van een tsunami',hover_data=["magnitude"])
 
 fig9.update_layout(
     updatemenus=[
