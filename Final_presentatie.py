@@ -364,7 +364,7 @@ with tab2:
     st.plotly_chart()
 
   with tab3:
-  st.header('Verbanden')
+    st.header('Verbanden')
   
   col5, col14 = st.columns([270, 50])
   with col5:
