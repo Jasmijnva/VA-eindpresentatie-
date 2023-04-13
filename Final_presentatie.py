@@ -376,6 +376,7 @@ with tab3:
   
   with col14:
     st.subheader('Conclusies verbanden')
+  with st.expander: 
     st.write('We hebben niet verder gekeken naar de significantie vs. estimated intensity omdat: ')
   
   
