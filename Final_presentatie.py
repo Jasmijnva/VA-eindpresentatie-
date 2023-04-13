@@ -366,12 +366,14 @@ with tab2:
     st.plotly_chart(fig4)
   st.write('In Azie is er veel data over de gaps, maar in Noord-Amerika zijn de grootste gaps gemeten.')
   
-  #col5 = st.columns([270, 5])
-  #with col5:
-  st.pyplot(fig5)
     
 with tab3:
   st.header('Verbanden')
+  
+  #col5 = st.columns([270, 5])
+  #with col5:
+  st.pyplot(fig5)
+  
   
   col6, col7 = st.columns([250, 5])
   with col6:
