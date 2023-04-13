@@ -425,9 +425,14 @@ with tab4:
   
   with col10:
     st.plotly_chart(fig9)
-    st.subheader('Hoogte van de maan vs tsunami per continent')
-    st.write('Deze grafiek is alleen relevant voor Azie en Zuid-Amerika, hier is bij beide continenten te zien dat de hoogte van de maan gemiddeld hoger ligt bij het voorkomen van een tsunami.')
-    st.write('THEORIE VAN INTERNET ZOEKEN')
+    st.subheader('volle maan vs tsunami per continent')
+    st.write('Bij deze plot hebben we gekeken of de theorie klopt dat bij een volle maan meer kans is op een tsunami.')
+    st.write('Wetenschappers hebben de periodes waarin sprake is van hoge getijdenstress onder de loep genomen.')
+    st.write('Hoge getijdenstress is een fenomeen dat 2x per maand plaatsvindt tijdens volle maan en nieuwe maan.')
+    st.write('De zee komt dan het verst bij vloed en trekt zich ook het verst terug bij eb. Die bewegingen van die enorme hoeveelheid zeewater zet meer druk op de breuklijnen.')
+    st.write('Deze druk kan een van de oorzaken zijn dat bijvoorbeeld kleine aardbevingen heel groot worden.')
+    st.write('Dit verklaart ook meteen het verschil in alert en magnitude van de vorige pagina.')
+    st.write('De aardbevingen die enorme tsunami s veroorzaakten in 2004 in Zuidoost-Azie
   
   
 with tab5:
