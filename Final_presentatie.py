@@ -364,7 +364,7 @@ with tab2:
   st.write('Het grootste azimutale verschil tussen azimutaal aangrenzende stations (in graden). Over het algemeen geldt: hoe kleiner dit getal, hoe betrouwbaarder de berekende horizontale positie van de aardbeving. Aardbevingslocaties met een azimutale kloof van meer dan 180 graden hebben doorgaans grote locatie- en diepteonzekerheden.')
   
   with col4: 
-    st.plotly_chart(fig4)
+    #st.plotly_chart(fig4)
 
   
     
