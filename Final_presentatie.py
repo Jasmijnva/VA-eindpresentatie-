@@ -388,7 +388,7 @@ with tab3:
   st.write('Uit deze chart is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture.')
   
   
-  col8, col9 = st.columns([250, 50])
+  col8, col9 = st.columns([250, 20])
   with col8: 
     st.plotly_chart(fig11)
   st.write('In tegenstelling tot het vorige plot is er wel een duidelijk verband te zien tussen de accuratie van de magnitude voorspelling en de diepte waarop de aardbeving rupture zich bevind. Hoe dieper de rupture hoe minder accuraat de voorspelling.')
