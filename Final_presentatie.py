@@ -389,7 +389,7 @@ with tab3:
   st.write('Wel zien we ook bij deze plot de hoogste aardbeving ooit gemeten. Dit betreft een aardbeving in Japan met een magnitude van 9.1')
   
   
-  col8, col9 = st.columns([250, 5])
+  col8, col9 = st.columns([500, 5])
   with col8: 
     st.plotly_chart(fig11)
     st.subheader('Conclusie accuratie van de magnitude vs rupture diepte')
