@@ -392,8 +392,8 @@ with tab3:
   col8, col9 = st.columns([1200, 5])
   with col8: 
     st.plotly_chart(fig11)
-    st.subheader('Conclusie accuratie van de magnitude vs rupture diepte')
-    st.write('Voor de accuratie van de magnitude hebben we een nieuwe kolom aangemaakt die het verschil laat zien tussen de estimated intensity en de reported intensity')
+    st.subheader('Conclusie accuratie voorspelling van de magnitude vs rupture diepte')
+    st.write('Voor de accuratie van de magnitude voorspelling hebben we een nieuwe kolom aangemaakt die het verschil laat zien tussen de estimated intensity en de reported intensity')
     st.write('We hebben al gezien dat de magnitude correleert met de intensity van de aardbeving in de heatmap.')
     st.write('In deze plot is een trendline weergegeven die als R^2 een 0.019784 aangeeft. De R Squared geeft aan hoeveel van de variantie in de afhankelijk variabele verklaard wordt door de verklarende variabelen.')
     st.write('In dit geval verklaart de variabele diepte voor 1,9% het verschil tussen de predicted en estimated intensity.')
