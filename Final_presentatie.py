@@ -366,15 +366,16 @@ with tab2:
     st.plotly_chart(fig4)
   st.write('In Azie is er veel data over de gaps, maar in Noord-Amerika zijn de grootste gaps gemeten.')
   
+  with col5:
+    st.pyplot(fig5)
+    
 with tab3:
   st.header('Verbanden')
   
   col5, col6 = st.columns([250, 5])
   with col5:
-    st.pyplot(fig5)
-  st.plotly_chart(fig10)
-  st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude resulteert in een evenement met een hogere significantie .')
-  
+    st.plotly_chart(fig8)
+    st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami.')
   with col6:
     st.plotly_chart(fig6)
   st.write('Uit deze chart is geen duidelijk verband te vinden tussen magnitude en de diepte van de rupture.')
@@ -394,11 +395,15 @@ with col8:
  
 with tab4:
   st.header('tab4')
-  col9, col10 = st.columns([250, 5])
+  col10, col9 = st.columns([250, 5])
   with col9:
     st.plotly_chart(fig8)
     
     st.write('Het valt op dat de gemiddelde magnitude van een aardbeving met een tsunami hoger ligt dan van aardbevingen zonder tsunami.')
+    
+    st.plotly_chart(fig10)
+  st.write('Als men de  trendlijn bekijkt van 2001 tot 2016 valt op dat deze steeds minder stijl wordt over de jaren heen. Dit zou betekenen dat er bij aardbevingen met een hogere magnitude resulteert in een evenement met een hogere significantie .')
+  
   
   with col10:
     st.plotly_chart(fig9)
