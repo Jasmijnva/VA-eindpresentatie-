@@ -373,7 +373,7 @@ with tab3:
       st.write('We hebben niet verder gekeken naar de significantie vs. estimated intensity omdat dit een logisch verband is met elkaar. Een hoge significantie is automatisch een hoge estimated intensity.')
   
   
-  col6, col7 = st.columns([250, 5])
+  col6, col7 = st.columns([250, 50])
   with col6:
     st.plotly_chart(fig8)
     st.subheader('Conclusie boxplot magnitude per continent met en zonder tsunami')
