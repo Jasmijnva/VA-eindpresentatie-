@@ -424,7 +424,7 @@ with tab4:
   
   with col10:
     st.plotly_chart(fig9)
-    st.subheader('
+    st.subheader('')
     st.write('Deze grafiek is alleen relevant voor Azie en Zuid-Amerika, hier is bij beide continenten te zien dat de hoogte van de maan gemiddeld hoger ligt bij het voorkomen van een tsunami.')
     st.write('LOGISCHE VERKLARING')
   
