@@ -120,7 +120,7 @@ fig3.show()
 
 #bar chart van gap's per continent 
 fig4 = px.bar(df, y="continent", x="gap", color="continent", orientation="h", hover_name="country",
-             color_discrete_sequence=["red", "green", "blue", "goldenrod", "magenta"],
+             color_discrete_sequence=["magenta", "red", "blue", "green", "goldenrod"],
              title="Gaps per continent", labels={
                      "continent": "Continent", "gap": "Gap"}
             )
@@ -346,7 +346,7 @@ with tab2:
   with col1:
     st.plotly_chart(fig1)
     
-  st.subheader('Conclusie aardbevingen vs magnitude')
+  st.subheader('Conclusie aardbevingen per magnitude')
   st.write('Zoals we kunnen zien zijn er veel aardbevingen die in de magnitude 6.5 geschaald zijn')
   st.write('Er is een enkele aardbeving in de magnitude 9.1, hier hebben we verder onderzoek naar gedaan')
 
