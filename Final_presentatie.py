@@ -355,7 +355,7 @@ with tab2:
   st.subheader('Conclusie aardbevingen vs tsunami')
   st.write('Meer dan 60% van de aardbevingen hebben geen tsunami')
   
-  col3, col4 = st.columns([270, 5])
+  col3, col4, col5 = st.columns([270, 5])
   with col3:
     st.plotly_chart(fig3)
   st.write('De meeste aardbevingen zijn in Azie ontstaan')
